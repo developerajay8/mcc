@@ -10,7 +10,7 @@ export default function Faculty() {
       achievement: '1st Rank - CA Foundation',
       award: 'Gold Scholar Award',
       details: 'Top marks in Accounts and Business Law with 82% overall score.',
-      image: '/pink.png',
+      image: '/s.png',
       year: '2024',
     },
     {
@@ -18,7 +18,7 @@ export default function Faculty() {
       achievement: '2nd Rank - CMA Foundation',
       award: 'Commerce Excellence Medal',
       details: 'Outstanding performance in Cost & Management Accounting and Taxation.',
-      image: '/black.png',
+      image: '/s.png',
       year: '2024',
     },
     {
@@ -26,7 +26,7 @@ export default function Faculty() {
       achievement: 'Top Performer - CUET Commerce',
       award: 'Ranker Achievement Trophy',
       details: 'Secured a top percentile score with focused exam strategy and revision.',
-      image: '/gray.png',
+      image: '/s.png',
       year: '2024',
     },
     {
@@ -34,7 +34,7 @@ export default function Faculty() {
       achievement: 'Top Ranker - XI Commerce',
       award: 'Board Merit Award',
       details: 'Exceptional board results in Accounts, Economics and Business Studies.',
-      image: '/brown.png',
+      image: '/s.png',
       year: '2024',
     },
   ];
