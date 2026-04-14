@@ -6,36 +6,36 @@ import { FaFacebook, FaTwitter, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 export default function Faculty() {
   const faculty = [
     {
-      name: 'Ustadh Ahmed Khan',
-      role: 'Quran & Tajweed Teacher',
-      experience: '15 years',
-      qualifications: 'Alim from Darul Uloom Deoband',
+      name: 'Prof. Rahul Singh',
+      role: 'CA Foundation Coach',
+      experience: '9 years',
+      qualifications: 'Chartered Accountant & Commerce Mentor',
       image: '/faculty1.jpg',
-      social: { facebook: '#', twitter: '#', linkedin: '#', email: 'ahmed@mcc.com' },
+      social: { facebook: '#', twitter: '#', linkedin: '#', email: 'update@gmail.com' },
     },
     {
-      name: 'Ustadha Fatima Noor',
-      role: 'Islamic Studies Mentor',
-      experience: '12 years',
-      qualifications: 'MA Islamic Studies, Jamia Millia',
+      name: 'CMA N.K. Sharma',
+      role: 'CMA Foundation Specialist',
+      experience: '7 years',
+      qualifications: 'CMA, Financial Reporting Expert',
       image: '/faculty2.jpg',
-      social: { facebook: '#', twitter: '#', linkedin: '#', email: 'fatima@mcc.com' },
+      social: { facebook: '#', twitter: '#', linkedin: '#', email: 'update@gmail.com' },
     },
     {
-      name: 'Ustadh Salman Raza',
-      role: 'Memorization Coach',
+      name: 'Prof. Ankit Bhardwaj',
+      role: 'CMA Intermediate Trainer',
       experience: '10 years',
-      qualifications: 'Hafiz-ul-Quran, Ijazah in Tajweed',
+      qualifications: 'CMA Inter & Strategic Cost Management',
       image: '/faculty3.jpg',
-      social: { facebook: '#', twitter: '#', linkedin: '#', email: 'salman@mcc.com' },
+      social: { facebook: '#', twitter: '#', linkedin: '#', email: 'update@gmail.com' },
     },
     {
-      name: 'Ustadha Ayesha Siddiqui',
-      role: 'Online Learning Specialist',
-      experience: '14 years',
-      qualifications: 'M.Ed & Certified Tutor',
+      name: 'CMA Keshav Khuntata',
+      role: 'Final Exam Mentor',
+      experience: '5 years',
+      qualifications: 'CMA Final, Audit & Assurance Expert',
       image: '/faculty4.jpg',
-      social: { facebook: '#', twitter: '#', linkedin: '#', email: 'ayesha@mcc.com' },
+      social: { facebook: '#', twitter: '#', linkedin: '#', email: 'update@gmail.com' },
     },
   ];
 
@@ -54,10 +54,10 @@ export default function Faculty() {
         >
           <p className="text-sm uppercase tracking-[0.35em] text-[#ffb26a]/80">Our Faculty</p>
           <h2 className="mt-4 text-4xl font-bold text-white sm:text-5xl">
-            Meet the MCC Classes teaching team
+            Meet the MCC Classes coaching team
           </h2>
           <p className="mx-auto mt-6 max-w-3xl text-base text-slate-300 sm:text-lg">
-            Our faculty brings Quran expertise, modern teaching experience, and personalized support to every student.
+            Our faculty blends commerce expertise, exam experience and personalised mentoring for every student.
           </p>
         </motion.div>
 
@@ -70,9 +70,9 @@ export default function Faculty() {
               transition={{ delay: index * 0.1, duration: 0.8 }}
               viewport={{ once: true }}
               whileHover={{ y: -10 }}
-              className="relative overflow-hidden rounded-[16px] border border-white/10 bg-[#0f294f]/90 shadow-2xl shadow-[#020d20]/40"
+              className="relative overflow-hidden rounded-[36px] border border-white/10 bg-[#0f294f]/90 shadow-2xl shadow-[#020d20]/40"
             >
-              <div className="relative h-72 overflow-hidden rounded-t-[16px] bg-gradient-to-br from-[#0f294f] via-[#112d58] to-[#08162f]">
+              <div className="relative h-72 overflow-hidden rounded-t-[36px] bg-gradient-to-br from-[#0f294f] via-[#112d58] to-[#08162f]">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,140,66,0.18),_transparent_35%)]" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_rgba(255,187,106,0.14),_transparent_35%)]" />
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -83,7 +83,7 @@ export default function Faculty() {
                 <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#08162f] via-[#08162f]/90 to-transparent" />
               </div>
 
-              <div className="relative z-10 py-8 px-4">
+              <div className="relative z-10 p-8">
                 <h3 className="text-2xl font-semibold text-white mb-2">{member.name}</h3>
                 <p className="text-[#ffb26a] font-medium mb-4">{member.role}</p>
                 <p className="text-slate-300 text-sm leading-relaxed mb-6">{member.qualifications}</p>
@@ -139,14 +139,14 @@ export default function Faculty() {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <div className="relative overflow-hidden rounded-[20px] border border-white/10 bg-[#e3c8b6] p-10 shadow-2xl shadow-[#020d20]/40">
+          <div className="relative overflow-hidden rounded-[40px] border border-white/10 bg-[#0f294f]/90 p-10 shadow-2xl shadow-[#020d20]/40">
             <div className="absolute -left-16 top-8 h-28 w-28 rounded-full bg-[#ff8c42]/15 blur-3xl" />
             <div className="absolute right-8 top-10 h-20 w-20 rounded-full bg-[#ffb26a]/20 blur-2xl" />
             <div className="relative z-10">
-              <p className="text-sm uppercase tracking-[0.35em] text-[black]">Join our faculty</p>
-              <h3 className="mt-4 text-3xl font-bold text-[#06102d]">Become part of MCC Classes</h3>
-              <p className="mx-auto mt-4 max-w-2xl text-[#574f5a] leading-relaxed">
-                We are looking for experienced Quran tutors and educators who love teaching with clarity and care.
+              <p className="text-sm uppercase tracking-[0.35em] text-[#ffb26a]/80">Join our faculty</p>
+              <h3 className="mt-4 text-3xl font-bold text-white">Become part of MCC Classes</h3>
+              <p className="mx-auto mt-4 max-w-2xl text-slate-300 leading-relaxed">
+                We are looking for experienced commerce educators who are passionate about guiding students to top results.
               </p>
               <button className="mt-10 inline-flex items-center justify-center rounded-full bg-[#ff8c42] px-10 py-4 text-sm font-semibold text-slate-950 transition hover:bg-[#ff9b34]">
                 Apply Now

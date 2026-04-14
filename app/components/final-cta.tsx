@@ -85,7 +85,7 @@ export default function FinalCTA() {
                   </div>
                   <div>
                     <p className="text-[#06102d] text-left font-semibold">Email Us</p>
-                    <p className="text-[black]">admissions@mccclasses.com</p>
+                    <p className="text-[black]">update@gmail.com</p>
                   </div>
                 </div>
               </div>

@@ -20,10 +20,10 @@ export default function CoursesHero() {
         >
           <p className="text-sm uppercase tracking-[0.35em] text-[#ffb26a]/80">Our Courses</p>
           <h2 className="mt-4 text-4xl font-bold text-white sm:text-5xl">
-            Comprehensive Learning Programs
+            Commerce Coaching for CA, CMA & Boards
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-base text-slate-300 sm:text-lg">
-            Choose from our wide range of expertly designed courses tailored to help you excel in your academic goals.
+            Expert-led programmes crafted for ambitious commerce students preparing for Foundation, Inter, Final and XII board exams.
           </p>
         </motion.div>
 
@@ -31,18 +31,18 @@ export default function CoursesHero() {
           {[
             {
               icon: FaBook,
-              title: 'Expert Curriculum',
-              desc: 'Carefully designed course materials by experienced educators covering all essential topics.',
+              title: 'CA & CMA Exam Focus',
+              desc: 'Complete coverage for Foundation, Inter, Final and commerce board exam syllabuses.',
             },
             {
               icon: FaUsers,
-              title: 'Live Classes',
-              desc: 'Interactive live sessions with direct access to experienced instructors and peer learning.',
+              title: 'Live Doubt Support',
+              desc: 'Live doubt sessions, practice tests and one-on-one mentoring for every student.',
             },
             {
               icon: FaAward,
-              title: 'Proven Results',
-              desc: 'Track record of student success with consistently high exam scores and achievements.',
+              title: 'Result-driven Training',
+              desc: 'Proven coaching with result-oriented study plans, revision cycles and confidence building.',
             },
           ].map((item, index) => (
             <motion.div

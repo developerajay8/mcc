@@ -9,22 +9,22 @@ export default function CoursesFeatures() {
     {
       icon: FaVideo,
       title: 'Recorded Sessions',
-      description: 'Access recorded classes anytime, anywhere to revisit lessons and learn at your own pace.',
+      description: 'Revisit recorded commerce classes and revision workshops to sharpen your exam readiness.',
     },
     {
       icon: FaHeadset,
-      title: '24/7 Support',
-      description: 'Dedicated support team available round the clock to answer your questions and concerns.',
+      title: 'Expert Doubt Support',
+      description: 'Live doubt clearing and mentoring from commerce subject experts whenever you need it.',
     },
     {
       icon: FaCheckCircle,
-      title: 'Verified Certificates',
-      description: 'Earn recognized certificates upon successful completion of your chosen course.',
+      title: 'Exam Readiness',
+      description: 'Complete preparation with mock tests, performance reviews and target-focused guidance.',
     },
     {
       icon: FaChartLine,
-      title: 'Progress Tracking',
-      description: 'Monitor your learning progress with detailed performance analytics and personalized feedback.',
+      title: 'Results Tracking',
+      description: 'Track your progress across subjects and focus on improving weak areas for better results.',
     },
   ];
 

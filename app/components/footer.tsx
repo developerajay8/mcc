@@ -159,7 +159,7 @@ export default function Footer() {
                 <div className="bg-[#ff8c42]/20 p-2 rounded-lg">
                   <FaEnvelope className="text-[#ffb26a] flex-shrink-0" />
                 </div>
-                <p className="text-slate-300">info@mccclasses.com</p>
+                <p className="text-slate-300">update@gmail.com</p>
               </div>
             </div>
           </motion.div>

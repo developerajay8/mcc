@@ -38,7 +38,7 @@ export default function ContactHero() {
             {
               icon: FaEnvelope,
               title: 'Email Us',
-              desc: 'hello@mccclasses.com',
+              desc: 'update@gmail.com',
               subtext: 'We reply within 24 hours',
             },
             {

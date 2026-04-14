@@ -6,51 +6,43 @@ import { FaBook, FaClock, FaUsers, FaStar } from 'react-icons/fa';
 export default function Courses() {
   const courses = [
     {
-      title: 'Mathematics Excellence',
-      description: 'Master advanced mathematical concepts with our expert faculty.',
-      duration: '6 months',
-      students: 150,
+      title: 'CA Foundation Coaching',
+      description: 'Focused classes for CA Foundation with problem-solving drills and full syllabus coverage.',
+      duration: '9 months',
+      students: 320,
       rating: 4.9,
       icon: FaBook,
     },
     {
-      title: 'Science Mastery',
-      description: 'Comprehensive science education covering Physics, Chemistry, and Biology.',
+      title: 'CMA Foundation Mastery',
+      description: 'Structured coaching for CMA Foundation, including theory, practicals and revision tests.',
       duration: '8 months',
-      students: 200,
+      students: 260,
       rating: 4.8,
       icon: FaBook,
     },
     {
-      title: 'English Proficiency',
-      description: 'Enhance your communication skills and language proficiency.',
-      duration: '4 months',
-      students: 120,
-      rating: 4.7,
-      icon: FaBook,
-    },
-     {
-      title: 'Mathematics Excellence',
-      description: 'Master advanced mathematical concepts with our expert faculty.',
+      title: 'CMA Inter Accelerator',
+      description: 'Accelerated training for CMA Intermediate with exam strategy and time management.',
       duration: '6 months',
-      students: 150,
+      students: 190,
       rating: 4.9,
       icon: FaBook,
     },
     {
-      title: 'Science Mastery',
-      description: 'Comprehensive science education covering Physics, Chemistry, and Biology.',
-      duration: '8 months',
-      students: 200,
-      rating: 4.8,
+      title: 'XI-XII Commerce Board Success',
+      description: 'Commerce classes for XI-XII with Accounts, Economics, Business Studies and Computer.',
+      duration: '12 months',
+      students: 410,
+      rating: 4.9,
       icon: FaBook,
     },
     {
-      title: 'English Proficiency',
-      description: 'Enhance your communication skills and language proficiency.',
-      duration: '4 months',
-      students: 120,
-      rating: 4.7,
+      title: 'CUET / Commerce Entrance Prep',
+      description: 'High-impact coaching for CUET and university commerce entrance exams.',
+      duration: '5 months',
+      students: 145,
+      rating: 4.8,
       icon: FaBook,
     }
   ];
@@ -66,10 +58,10 @@ export default function Courses() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            Our <span className="text-[#ffb26a]">Courses</span>
+            Our <span className="text-[#ffb26a]">Commerce</span> Programs
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Discover our comprehensive range of courses designed to help you excel in your academic journey.
+            Tailored coaching for CA, CMA, CUET and XI-XII commerce students with expert faculty and proven results.
           </p>
         </motion.div>
 

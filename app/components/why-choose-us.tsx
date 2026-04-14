@@ -7,33 +7,33 @@ export default function WhyChooseUs() {
   const features = [
     {
       icon: FaLightbulb,
-      title: 'Innovative Teaching',
-      description: 'Modern live classes and interactive learning tools.',
+      title: 'Specialized Commerce Coaching',
+      description: 'Focused classes for CA Foundation, CMA, XI-XII Commerce, and CUET.',
     },
     {
       icon: FaUserGraduate,
       title: 'Expert Faculty',
-      description: 'Qualified tutors guiding every student to success.',
+      description: 'Experienced tutors with strong industry and teaching credentials.',
     },
     {
       icon: FaChalkboardTeacher,
-      title: 'Personalized Attention',
-      description: 'Small groups and one-on-one mentoring for better progress.',
+      title: 'Personalized Mentorship',
+      description: 'Small batches and one-to-one support for every student.',
     },
     {
       icon: FaCertificate,
       title: 'Proven Results',
-      description: 'High success rates and top student outcomes every term.',
+      description: 'Consistent toppers and high exam scores every year.',
     },
     {
       icon: FaClock,
-      title: 'Flexible Timing',
-      description: 'Multiple schedules designed to fit your busy life.',
+      title: 'Flexible Schedules',
+      description: 'Morning, evening and weekend batches made to fit your routine.',
     },
     {
       icon: FaHandshake,
       title: 'Trusted Support',
-      description: 'Friendly guidance and ongoing academic help.',
+      description: 'Career guidance, doubt-solving and revision workshops included.',
     },
   ];
 
@@ -52,10 +52,10 @@ export default function WhyChooseUs() {
         >
           <p className="text-sm uppercase tracking-[0.35em] text-[#ffb26a]/80">Why choose us</p>
           <h2 className="mt-4 text-4xl font-bold text-white sm:text-5xl">
-            Premium benefits for every Quran learner
+            Premium benefits for every commerce aspirant
           </h2>
           <p className="mx-auto mt-6 max-w-3xl text-base text-slate-300 sm:text-lg">
-            We combine high-quality teaching, flexible schedules and proven results to make learning easy and effective.
+            We combine industry-focused coaching, exam-ready study plans and personalised mentoring to drive your highest results.
           </p>
         </motion.div>
 
@@ -98,10 +98,10 @@ export default function WhyChooseUs() {
             <div className="absolute right-8 top-10 h-20 w-20 rounded-full bg-[#ffb26a]/20 blur-2xl" />
 
             <div className="relative z-10 flex flex-col items-center gap-6 text-center">
-              <p className="text-sm uppercase tracking-[0.35em] ">Start your success story</p>
-              <h3 className="text-3xl font-bold text-[#06102d] sm:text-4xl">The best choice for Quran learners</h3>
+              <p className="text-sm uppercase tracking-[0.35em]">Start your success story</p>
+              <h3 className="text-3xl font-bold text-[#06102d] sm:text-4xl">The best choice for commerce students</h3>
               <p className="max-w-2xl text-base text-[#574f5a] sm:text-lg">
-                Unlock your potential with expert tutors, modern curriculum, and support designed for fast progress.
+                Join Mahendra Commerce Classes and get expert mentorship, regular tests, doubt solving and exam-focused coaching for top results.
               </p>
               <button className="inline-flex items-center justify-center rounded-full bg-[#ff8c42] px-10 py-4 text-sm font-semibold text-slate-950 transition hover:bg-[#ff9b34]">
                 Get Started Today

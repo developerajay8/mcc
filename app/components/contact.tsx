@@ -19,9 +19,7 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission
     console.log('Form submitted:', formData);
-    // Reset form
     setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
   };
 
@@ -29,17 +27,17 @@ export default function Contact() {
     {
       icon: FaMapMarkerAlt,
       title: 'Visit Us',
-      details: ['MCC Classes Institute', '123 Education Street, Connaught Place', 'New Delhi, India - 110001'],
+      details: ['Mahendra Commerce Classes', 'Dada Gurudev Nagar, Diggi Malpura Rd', 'Sanganer, Jaipur - 302029'],
     },
     {
       icon: FaPhone,
       title: 'Call Us',
-      details: ['+91 98765 43210', '+91 98765 43211'],
+      details: ['+91 76888 26669', '+91 72220 17506'],
     },
     {
       icon: FaEnvelope,
       title: 'Email Us',
-      details: ['info@mccclasses.com', 'admissions@mccclasses.com'],
+      details: ['update@gmail.com'],
     },
     {
       icon: FaClock,
@@ -62,14 +60,13 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <p className="text-sm uppercase tracking-[0.35em] text-[#ffb26a]/80">Get in Touch</p>
-          <h2 className="mt-4 text-4xl font-bold text-white sm:text-5xl">Contact MCC Classes</h2>
+          <h2 className="mt-4 text-4xl font-bold text-white sm:text-5xl">Contact Mahendra Commerce Classes</h2>
           <p className="mx-auto mt-4 max-w-3xl text-base text-slate-300 sm:text-lg">
-            Ready to start your journey? Reach out to us for admissions, course inquiries, or personalized guidance.
+            Ready to transform your commerce career? Reach out now for admission, course guidance or career counselling.
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -80,8 +77,7 @@ export default function Contact() {
             <div>
               <h3 className="text-2xl font-bold text-white mb-6">Connect With Us</h3>
               <p className="text-slate-300 mb-8 leading-relaxed">
-                Have questions about our programs, admission process, or need personalized guidance?
-                We're here to help you every step of the way.
+                Have questions about CA, CMA or Commerce coaching? We provide personal admission support and study planning for every student.
               </p>
             </div>
 
@@ -110,7 +106,6 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -124,7 +119,7 @@ export default function Contact() {
 
             <div className="mt-8">
               <h3 className="text-2xl font-bold text-white mb-2 text-center">Send us a Message</h3>
-              <p className="text-slate-300 text-center mb-8">We'll get back to you within 24 hours</p>
+              <p className="text-slate-300 text-center mb-8">Our team responds within 24 hours</p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -198,7 +193,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-slate-400 focus:ring-2 focus:ring-[#ff8c42] focus:border-transparent transition-all duration-300"
-                    placeholder="How can we help?"
+                    placeholder="What do you want help with?"
                   />
                 </motion.div>
               </div>
@@ -217,7 +212,7 @@ export default function Contact() {
                   required
                   rows={5}
                   className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-slate-400 focus:ring-2 focus:ring-[#ff8c42] focus:border-transparent transition-all duration-300 resize-none"
-                  placeholder="Tell us more about your inquiry..."
+                  placeholder="Tell us how we can support your commerce goals..."
                 />
               </motion.div>
 

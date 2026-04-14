@@ -15,17 +15,17 @@ export default function AboutUs() {
     {
       icon: FaHistory,
       title: 'Rich Experience',
-      description: 'A decade of trusted online Quran education.',
+      description: 'A decade of trusted commerce coaching for ambitious learners.',
     },
     {
       icon: FaEye,
       title: 'Clear Focus',
-      description: 'Dedicated learning paths designed for real progress.',
+      description: 'Curriculum designed for boards and professional exams.',
     },
     {
       icon: FaBullseye,
       title: 'Targeted Success',
-      description: 'Goal-oriented coaching that helps students achieve more.',
+      description: 'Personalized mentoring to hit your academic goals fast.',
     },
   ];
 
@@ -47,8 +47,7 @@ export default function AboutUs() {
             Learn more about <span className="text-[#ffb26a]">MCC Classes</span>
           </h2>
           <p className="mx-auto mt-6 max-w-3xl text-base text-slate-300 sm:text-lg">
-            We deliver premium online Quran learning through expert instructors, personal attention,
-            and a learning experience built to produce real results.
+            We deliver premium commerce coaching for CA, CMA and class XI-XII students with expert faculty and performance-driven teaching.
           </p>
         </motion.div>
 
@@ -66,11 +65,9 @@ export default function AboutUs() {
             <div className="relative z-10 space-y-8">
               <div className="rounded-[12px] border border-white/10 bg-white/5 p-8">
                 <p className="text-sm uppercase tracking-[0.35em] text-[#ffb26a]/80">Our story</p>
-                <h3 className="mt-4 text-3xl font-bold text-white">Trusted online Quran education</h3>
+                <h3 className="mt-4 text-3xl font-bold text-white">Trusted commerce coaching</h3>
                 <p className="mt-4 text-slate-300 leading-relaxed">
-                  Since 2013, MCC Classes has helped thousands of students learn the Quran with a
-                  modern and supportive learning experience. We combine expert tutors with flexible
-                  study plans to ensure every student can learn confidently.
+                  Since 2013, MCC Classes has helped thousands of students achieve top performance in commerce boards and professional exams. Our classes pair experienced mentors with modern, outcome-focused study programs.
                 </p>
               </div>
 
@@ -133,17 +130,16 @@ export default function AboutUs() {
             <div className="absolute right-10 bottom-8 h-20 w-20 rounded-full bg-[#ffb26a]/20 blur-2xl" />
             <div className="relative z-10 text-center">
               <p className="text-sm uppercase tracking-[0.35em] text-black">Recognition</p>
-              <h3 className="mt-4 text-3xl font-bold text-[#06102d]">Awarded for excellence in education</h3>
+              <h3 className="mt-4 text-3xl font-bold text-[#06102d]">Awarded for excellence in commerce education</h3>
               <p className="mx-auto mt-4 max-w-2xl text-[#574f5a] leading-relaxed">
-                Recognized by learners and educators, MCC Classes has earned awards for teaching quality,
-                student support, and consistent academic performance.
+                Recognized by students and industry experts, MCC Classes excels in coaching commerce aspirants for board exams, professional certifications, and competitive entry tests.
               </p>
               <div className="mt-10 grid gap-4 sm:grid-cols-3">
                 {[
-                  'Best Educational Institute 2023',
-                  'Excellence in Teaching Award',
-                  'Student Choice Award 2022',
-                ].map((award, index) => (
+                  'Best Commerce Coaching 2023',
+                  'Top Result Achievement Award',
+                  'Outstanding Student Support',
+                ].map((award) => (
                   <div key={award} className="rounded-[32px] border border-white/10 bg-[#06102d] p-5 text-left">
                     <div className="flex items-center gap-3">
                       <FaAward className="text-[#ffb26a] text-2xl" />
