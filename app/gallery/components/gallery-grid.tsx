@@ -9,7 +9,7 @@ export default function GalleryGrid() {
     { id: 1, title: 'Classroom Sessions', category: 'Classes', image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=500&h=400&fit=crop', students: '150+' },
     { id: 2, title: 'Student Success Stories', category: 'Success', image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=400&fit=crop', students: '200+' },
     { id: 3, title: 'Annual Events', category: 'Events', image: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=500&h=400&fit=crop', students: '300+' },
-    { id: 4, title: 'Quran Study Groups', category: 'Classes', image: 'https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=500&h=400&fit=crop', students: '120+' },
+    { id: 4, title: 'Commerce Study Groups', category: 'Classes', image: 'https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=500&h=400&fit=crop', students: '120+' },
     { id: 5, title: 'Community Gatherings', category: 'Community', image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=500&h=400&fit=crop', students: '250+' },
     { id: 6, title: 'Graduation Ceremonies', category: 'Success', image: 'https://images.unsplash.com/photo-1533900298318-6b8da08a523e?w=500&h=400&fit=crop', students: '180+' },
     { id: 7, title: 'Online Learning Sessions', category: 'Classes', image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=400&fit=crop', students: '400+' },
