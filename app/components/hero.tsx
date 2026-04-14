@@ -50,8 +50,8 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="relative mx-auto w-full max-w-xl"
         >
-          <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-[#031124] p-4 shadow-2xl shadow-[#020d20]/50">
-            <img src="/hero.png" alt="Commerce coaching success" className="h-[500px] w-full object-cover rounded-[24px]" />
+          <div className="">
+            <img src="/heroimage.jpg" alt="Commerce coaching success" className="h-[500px] w-full object-cover rounded-[24px]" />
           </div>
         </motion.div>
       </div>
