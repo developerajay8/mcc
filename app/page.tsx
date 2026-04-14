@@ -20,12 +20,12 @@ export default function Home() {
     <Courses/>
     <Results/>
     <WhyChooseUs/>
+    <FinalCTA/>
     <AboutUs/>
     <Faculty/>
     <Testimonials/>
     <Gallery/>
     <Contact/>
-    <FinalCTA/>
     <Footer/>
  </div>
   );

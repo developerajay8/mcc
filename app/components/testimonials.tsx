@@ -1,131 +1,161 @@
-'use client';
-import React from 'react';
+﻿'use client';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaQuoteLeft, FaStar } from 'react-icons/fa';
+import { FaQuoteLeft, FaStar, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 export default function Testimonials() {
   const testimonials = [
     {
-      name: 'Rahul Sharma',
+      name: 'Amina Khan',
       role: 'Class 12 Student',
-      image: '/student1.jpg', // Placeholder
-      rating: 5,
-      testimonial: 'MCC Classes transformed my approach to studies. The teachers are incredibly supportive and the teaching methods are innovative. I scored 95% in my board exams!',
-      achievement: '95% in CBSE Board Exams',
+      date: 'Apr 20, 2024',
+      rating: 4.9,
+      quote: 'MCC Classes helped me prepare for boards with confidence. The live classes and teacher support made all the difference in my success.',
+      initials: 'AK',
+    },
+    {
+      name: 'Imran Siddiqui',
+      role: 'JEE Aspirant',
+      date: 'May 15, 2024',
+      rating: 4.9,
+      quote: 'The teaching style is clear and focused. I improved my problem solving and timing through daily practice sessions. Highly recommended!',
+      initials: 'IS',
+    },
+    {
+      name: 'Sana Raza',
+      role: 'NEET Student',
+      date: 'Jun 01, 2024',
+      rating: 4.9,
+      quote: 'Personalized doubt clearing and regular tests gave me the confidence to score high. MCC Classes is the best choice for serious learners.',
+      initials: 'SR',
+    },
+    {
+      name: 'Rahul Sharma',
+      role: 'Class 10 Student',
+      date: 'Jul 10, 2024',
+      rating: 4.8,
+      quote: 'The interactive sessions and study materials are top-notch. I scored 95% in my exams thanks to MCC Classes guidance.',
+      initials: 'RS',
     },
     {
       name: 'Priya Patel',
-      role: 'JEE Aspirant',
-      image: '/student2.jpg', // Placeholder
-      rating: 5,
-      testimonial: 'The personalized attention and regular doubt-clearing sessions helped me crack JEE. The faculty here is world-class and always available for guidance.',
-      achievement: 'AIR 1250 in JEE Mains',
+      role: 'NEET Aspirant',
+      date: 'Aug 05, 2024',
+      rating: 4.9,
+      quote: 'Excellent faculty and structured curriculum. The mock tests really helped me understand my strengths and weaknesses.',
+      initials: 'PP',
     },
     {
-      name: 'Amit Kumar',
-      role: 'NEET Student',
-      image: '/student3.jpg', // Placeholder
-      rating: 5,
-      testimonial: 'From struggling with concepts to securing a medical seat - MCC Classes made it possible. The study material and test series were exceptional.',
-      achievement: 'MBBS Admission',
-    },
-    {
-      name: 'Sneha Gupta',
-      role: 'Class 10 Student',
-      image: '/student4.jpg', // Placeholder
-      rating: 5,
-      testimonial: 'The fun learning environment and interactive classes made studying enjoyable. I not only scored well but also developed a love for learning.',
-      achievement: '98% in Class 10 Boards',
+      name: 'Vikram Singh',
+      role: 'JEE Student',
+      date: 'Sep 12, 2024',
+      rating: 4.9,
+      quote: 'MCC Classes transformed my approach to competitive exams. The mentors are knowledgeable and always available for support.',
+      initials: 'VS',
     },
   ];
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const testimonialsPerPage = 3;
+  const totalPages = Math.ceil(testimonials.length / testimonialsPerPage);
+
+  const nextTestimonials = () => {
+    setCurrentIndex((prev) => (prev + 1) % totalPages);
+  };
+
+  const prevTestimonials = () => {
+    setCurrentIndex((prev) => (prev - 1 + totalPages) % totalPages);
+  };
+
+  const visibleTestimonials = testimonials.slice(
+    currentIndex * testimonialsPerPage,
+    (currentIndex + 1) * testimonialsPerPage
+  );
+
   return (
-    <section className="py-20 bg-gradient-to-r from-[#024b6f] to-[#d63137]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="testimonials" className="relative overflow-hidden bg-[#08162f] py-20 text-white">
+      <div className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-[#08162f] to-transparent" />
+      <div className="absolute left-10 top-10 h-32 w-32 rounded-full bg-[#ff8c42]/20 blur-3xl" />
+      <div className="absolute right-10 top-24 h-40 w-40 rounded-full bg-[#ffb26a]/10 blur-3xl" />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            Student <span className="text-[#ffde6a]">Testimonials</span>
+          <p className="text-sm uppercase tracking-[0.35em] text-[#ffb26a]/80">What our students say</p>
+          <h2 className="mt-4 text-4xl font-bold text-white sm:text-5xl">
+            Our Trusted Client Testimonials
           </h2>
-          <p className="text-xl text-[#ffde6a] max-w-3xl mx-auto">
-            Hear from our successful students about their transformative learning experience.
+          <p className="mx-auto mt-4 max-w-2xl text-base text-slate-300 sm:text-lg">
+            Real results, real progress — hear from students who achieved more with MCC Classes.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {testimonials.map((testimonial, index) => (
+        <div className="grid gap-8 lg:grid-cols-3">
+          {visibleTestimonials.map((item, index) => (
             <motion.div
-              key={testimonial.name}
-              initial={{ opacity: 0, y: 50 }}
+              key={item.name}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.2, duration: 0.8 }}
+              transition={{ delay: index * 0.15, duration: 0.8 }}
               viewport={{ once: true }}
-              whileHover={{ scale: 1.02 }}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300"
+              whileHover={{ y: -8 }}
+              className="relative overflow-hidden rounded-[20px] border border-white/10 bg-white/5 p-8 shadow-2xl shadow-[#020d20]/30"
             >
-              <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#ffde6a] to-[#daeb68] rounded-full flex items-center justify-center text-2xl font-bold text-[#024b6f] mr-4">
-                  {testimonial.name.split(' ').map(n => n[0]).join('')}
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white">{testimonial.name}</h3>
-                  <p className="text-[#ffde6a]">{testimonial.role}</p>
-                </div>
+              <div className=" rounded-full w-[80] border-4 border-[#08162f] bg-[#0f294f]/90 p-5 text-xl font-bold text-center text-white shadow-lg shadow-black/20">
+                {item.initials}
+              </div>
+              <div className="absolute top-12 right-8 rounded-3xl bg-[#ff8c42]/10 px-4 py-2 text-sm font-semibold text-[#ffb26a] backdrop-blur-md border border-[#ff8c42]/20">
+                <FaStar className="inline mr-2 text-[#ffde6a]" /> {item.rating}
               </div>
 
-              <div className="flex mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <FaStar key={i} className="text-[#ffde6a] text-lg" />
-                ))}
+              <div className="mt-16 pt-4">
+                <FaQuoteLeft className="text-[#ffb26a] text-3xl opacity-80 mb-6" />
+                <p className="text-base leading-relaxed text-slate-200">"{item.quote}"</p>
               </div>
 
-              <FaQuoteLeft className="text-[#daeb68] text-3xl mb-4 opacity-50" />
-
-              <p className="text-white text-lg leading-relaxed mb-6">
-                "{testimonial.testimonial}"
-              </p>
-
-              <div className="bg-gradient-to-r from-[#ffde6a] to-[#daeb68] rounded-lg p-4">
-                <p className="text-[#024b6f] font-semibold text-center">
-                  🎉 {testimonial.achievement}
-                </p>
+              <div className="mt-8 border-t border-white/10 pt-6">
+                <p className="font-semibold text-white">{item.name}</p>
+                <p className="text-sm text-slate-400">{item.role}</p>
+                <p className="text-xs uppercase tracking-[0.3em] text-slate-500 mt-2">{item.date}</p>
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.8 }}
-          viewport={{ once: true }}
-          className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8"
-        >
-          {[
-            { number: '4.9/5', label: 'Average Rating' },
-            { number: '1000+', label: 'Happy Students' },
-            { number: '95%', label: 'Satisfaction Rate' },
-          ].map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: index * 0.2, duration: 0.8 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.1 }}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20"
-            >
-              <div className="text-3xl font-bold text-[#ffde6a] mb-2">{stat.number}</div>
-              <div className="text-white font-semibold">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
+        <div className="mt-16 flex items-center justify-center gap-4 text-slate-200">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={prevTestimonials}
+            className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:bg-[#ff8c42]/15"
+          >
+            <FaChevronLeft />
+          </motion.button>
+          <div className="flex items-center gap-2">
+            {Array.from({ length: totalPages }, (_, i) => (
+              <span
+                key={i}
+                className={`block h-2 w-8 rounded-full cursor-pointer transition ${
+                  i === currentIndex ? 'bg-white' : 'bg-white/30'
+                }`}
+                onClick={() => setCurrentIndex(i)}
+              />
+            ))}
+          </div>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={nextTestimonials}
+            className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:bg-[#ff8c42]/15"
+          >
+            <FaChevronRight />
+          </motion.button>
+        </div>
       </div>
     </section>
   );

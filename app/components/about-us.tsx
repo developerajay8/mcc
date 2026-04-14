@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaHistory, FaEye, FaBullseye, FaAward } from 'react-icons/fa';
@@ -11,143 +11,148 @@ export default function AboutUs() {
     { number: '95%', label: 'Success Rate' },
   ];
 
+  const highlights = [
+    {
+      icon: FaHistory,
+      title: 'Rich Experience',
+      description: 'A decade of trusted online Quran education.',
+    },
+    {
+      icon: FaEye,
+      title: 'Clear Focus',
+      description: 'Dedicated learning paths designed for real progress.',
+    },
+    {
+      icon: FaBullseye,
+      title: 'Targeted Success',
+      description: 'Goal-oriented coaching that helps students achieve more.',
+    },
+  ];
+
   return (
-    <section id="about" className="py-20 bg-gradient-to-r from-[#024b6f] to-[#d63137]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Content */}
+    <section id="about" className="relative overflow-hidden bg-[#08162f] py-20 text-white">
+      <div className="absolute left-0 top-16 h-52 w-52 rounded-full bg-[#ff8c42]/15 blur-3xl" />
+      <div className="absolute right-0 top-24 h-64 w-64 rounded-full bg-[#ffb26a]/10 blur-3xl" />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <p className="text-sm uppercase tracking-[0.35em] text-[#ffb26a]/80">About Us</p>
+          <h2 className="mt-4 text-4xl font-bold text-white sm:text-5xl">
+            Learn more about <span className="text-[#ffb26a]">MCC Classes</span>
+          </h2>
+          <p className="mx-auto mt-6 max-w-3xl text-base text-slate-300 sm:text-lg">
+            We deliver premium online Quran learning through expert instructors, personal attention,
+            and a learning experience built to produce real results.
+          </p>
+        </motion.div>
+
+        <div className="grid gap-8 lg:grid-cols-[1.3fr_0.9fr]">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="space-y-8"
+            className="relative overflow-hidden rounded-[20px] border border-white/10 bg-[#0f294f]/90 p-10 shadow-2xl shadow-[#020d20]/50"
           >
-            <div>
-              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-                About <span className="text-[#ffde6a]">MCC Classes</span>
-              </h2>
-              <p className="text-xl text-[#ffde6a] leading-relaxed">
-                MCC Classes has been a beacon of educational excellence for over a decade,
-                nurturing young minds and shaping bright futures. Our commitment to quality
-                education and innovative teaching methods has made us the preferred choice
-                for students across the region.
-              </p>
-            </div>
+            <div className="absolute -left-12 top-10 h-28 w-28 rounded-full bg-[#ff8c42]/15 blur-3xl" />
+            <div className="absolute right-10 top-6 h-16 w-16 rounded-full bg-[#ffb26a]/20 blur-2xl" />
 
-            <div className="space-y-6">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.8 }}
-                viewport={{ once: true }}
-                className="flex items-start space-x-4"
-              >
-                <div className="bg-[#ffde6a] p-3 rounded-full">
-                  <FaHistory className="text-[#024b6f] text-xl" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Our History</h3>
-                  <p className="text-white/90">
-                    Founded in 2013, MCC Classes started with a vision to revolutionize
-                    education through personalized learning and modern teaching techniques.
-                  </p>
-                </div>
-              </motion.div>
+            <div className="relative z-10 space-y-8">
+              <div className="rounded-[12px] border border-white/10 bg-white/5 p-8">
+                <p className="text-sm uppercase tracking-[0.35em] text-[#ffb26a]/80">Our story</p>
+                <h3 className="mt-4 text-3xl font-bold text-white">Trusted online Quran education</h3>
+                <p className="mt-4 text-slate-300 leading-relaxed">
+                  Since 2013, MCC Classes has helped thousands of students learn the Quran with a
+                  modern and supportive learning experience. We combine expert tutors with flexible
+                  study plans to ensure every student can learn confidently.
+                </p>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.8 }}
-                viewport={{ once: true }}
-                className="flex items-start space-x-4"
-              >
-                <div className="bg-[#daeb68] p-3 rounded-full">
-                  <FaEye className="text-[#024b6f] text-xl" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Our Vision</h3>
-                  <p className="text-white/90">
-                    To be the leading educational institution that empowers every student
-                    to achieve their full potential and succeed in their chosen path.
-                  </p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6, duration: 0.8 }}
-                viewport={{ once: true }}
-                className="flex items-start space-x-4"
-              >
-                <div className="bg-[#ffde6a] p-3 rounded-full">
-                  <FaBullseye className="text-[#024b6f] text-xl" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Our Mission</h3>
-                  <p className="text-white/90">
-                    To provide exceptional education through innovative methods, expert faculty,
-                    and personalized attention to help students excel academically and personally.
-                  </p>
-                </div>
-              </motion.div>
+              <div className="grid gap-4 sm:grid-cols-2">
+                {highlights.map((item, index) => (
+                  <motion.div
+                    key={item.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1, duration: 0.8 }}
+                    viewport={{ once: true }}
+                    className="rounded-[16px] border border-white/10 bg-white/5 p-6"
+                  >
+                    <div className="inline-flex h-14 w-14 items-center justify-center rounded-xl bg-[#ff8c42]/15 text-2xl text-[#ffb26a] mb-4">
+                      <item.icon />
+                    </div>
+                    <h4 className="text-xl font-semibold text-white mb-2">{item.title}</h4>
+                    <p className="text-slate-300 leading-relaxed">{item.description}</p>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </motion.div>
 
-          {/* Stats */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="grid grid-cols-2 gap-6"
+            className="grid gap-6 sm:grid-cols-2"
           >
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 }}
+                initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.1, duration: 0.8 }}
                 viewport={{ once: true }}
-                whileHover={{ scale: 1.1 }}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300"
+                className="relative overflow-hidden rounded-[16px] border border-white/10 bg-[#0f294f]/90 p-8 text-center shadow-2xl shadow-[#020d20]/40"
               >
-                <div className="text-4xl font-bold text-[#ffde6a] mb-2">{stat.number}</div>
-                <div className="text-white font-semibold">{stat.label}</div>
+                <div className="absolute -right-10 top-6 h-24 w-24 rounded-full bg-[#ff8c42]/10 blur-3xl" />
+                <div className="relative z-10">
+                  <div className="text-4xl font-bold text-[#ffb26a]">{stat.number}</div>
+                  <div className="mt-3 text-slate-300 font-medium">{stat.label}</div>
+                </div>
               </motion.div>
             ))}
           </motion.div>
         </div>
 
-        {/* Awards Section */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.8 }}
+          transition={{ delay: 0.6, duration: 0.8 }}
           viewport={{ once: true }}
-          className="mt-20 text-center"
+          className="mt-16"
         >
-          <h3 className="text-3xl font-bold text-white mb-8">Recognition & Awards</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-            {[
-              'Best Educational Institute 2023',
-              'Excellence in Teaching Award',
-              'Student Choice Award 2022',
-            ].map((award, index) => (
-              <motion.div
-                key={award}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.2, duration: 0.8 }}
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.05 }}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
-              >
-                <FaAward className="text-[#ffde6a] text-3xl mx-auto mb-4" />
-                <p className="text-white font-semibold">{award}</p>
-              </motion.div>
-            ))}
+          <div className="relative overflow-hidden rounded-[20px] border border-white/10 bg-[#e3c8b6] p-10 shadow-2xl shadow-[#020d20]/40">
+            <div className="absolute left-10 top-8 h-24 w-24 rounded-full bg-[#ff8c42]/15 blur-3xl" />
+            <div className="absolute right-10 bottom-8 h-20 w-20 rounded-full bg-[#ffb26a]/20 blur-2xl" />
+            <div className="relative z-10 text-center">
+              <p className="text-sm uppercase tracking-[0.35em] text-black">Recognition</p>
+              <h3 className="mt-4 text-3xl font-bold text-[#06102d]">Awarded for excellence in education</h3>
+              <p className="mx-auto mt-4 max-w-2xl text-[#574f5a] leading-relaxed">
+                Recognized by learners and educators, MCC Classes has earned awards for teaching quality,
+                student support, and consistent academic performance.
+              </p>
+              <div className="mt-10 grid gap-4 sm:grid-cols-3">
+                {[
+                  'Best Educational Institute 2023',
+                  'Excellence in Teaching Award',
+                  'Student Choice Award 2022',
+                ].map((award, index) => (
+                  <div key={award} className="rounded-[32px] border border-white/10 bg-[#06102d] p-5 text-left">
+                    <div className="flex items-center gap-3">
+                      <FaAward className="text-[#ffb26a] text-2xl" />
+                      <p className="text-sm font-semibold text-white">{award}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>

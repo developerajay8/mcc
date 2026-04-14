@@ -9,12 +9,10 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { name: 'Home', href: '#home', icon: FaHome },
-    { name: 'Courses', href: '#courses', icon: FaBook },
-    { name: 'Results', href: '#results', icon: FaTrophy },
-    { name: 'About', href: '#about', icon: FaUsers },
-    { name: 'Gallery', href: '#gallery', icon: FaCamera },
-    { name: 'Contact', href: '#contact', icon: FaPhone },
+    { name: 'Home', href: '/', icon: FaHome },
+    { name: 'About', href: '/about', icon: FaUsers },
+    { name: 'Courses', href: '/courses', icon: FaBook },
+    { name: 'Gallery', href: '/gallery', icon: FaCamera },
   ];
 
   return (
@@ -22,7 +20,7 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-[#024b6f] to-[#d63137] shadow-lg"
+      className="fixed top-0 left-0 right-0 z-50 bg-[#08162f] "
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -40,9 +38,9 @@ export default function Navbar() {
             />
           </motion.div>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+          {/* Desktop Menu - Right Side */}
+          <div className="hidden md:flex items-center space-x-8">
+            <div className="flex items-baseline space-x-4">
               {menuItems.map((item, index) => (
                 <motion.a
                   key={item.name}
@@ -58,6 +56,17 @@ export default function Navbar() {
                 </motion.a>
               ))}
             </div>
+            
+            {/* Contact Us Button */}
+            <motion.a
+              href="/contact"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-[#ff8c42] text-slate-950 px-6 py-2 rounded-full font-semibold hover:bg-[#ffb26a] transition-colors duration-300 flex items-center space-x-2"
+            >
+              <FaPhone />
+              <span>Contact Us</span>
+            </motion.a>
           </div>
 
           {/* Mobile menu button */}
@@ -99,6 +108,20 @@ export default function Navbar() {
                   <span>{item.name}</span>
                 </motion.a>
               ))}
+              
+              {/* Mobile Contact Us Button */}
+              <motion.a
+                href="/contact"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: menuItems.length * 0.1 }}
+                whileHover={{ scale: 1.05, backgroundColor: '#ff8c42' }}
+                className="bg-[#ff8c42] text-slate-950 block px-3 py-3 rounded-md text-base font-semibold transition-all duration-300 flex items-center space-x-2 mt-4"
+                onClick={() => setIsOpen(false)}
+              >
+                <FaPhone />
+                <span>Contact Us</span>
+              </motion.a>
             </div>
           </motion.div>
         )}

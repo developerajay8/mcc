@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaLightbulb, FaUserGraduate, FaChalkboardTeacher, FaCertificate, FaClock, FaHandshake } from 'react-icons/fa';
@@ -8,44 +8,41 @@ export default function WhyChooseUs() {
     {
       icon: FaLightbulb,
       title: 'Innovative Teaching',
-      description: 'Cutting-edge teaching methods and interactive learning experiences.',
-      color: '#ffde6a',
+      description: 'Modern live classes and interactive learning tools.',
     },
     {
       icon: FaUserGraduate,
       title: 'Expert Faculty',
-      description: 'Highly qualified and experienced teachers dedicated to your success.',
-      color: '#daeb68',
+      description: 'Qualified tutors guiding every student to success.',
     },
     {
       icon: FaChalkboardTeacher,
       title: 'Personalized Attention',
-      description: 'Small batch sizes ensure individual attention and doubt clearing.',
-      color: '#d63137',
+      description: 'Small groups and one-on-one mentoring for better progress.',
     },
     {
       icon: FaCertificate,
       title: 'Proven Results',
-      description: 'Consistent track record of excellent academic performance.',
-      color: '#024b6f',
+      description: 'High success rates and top student outcomes every term.',
     },
     {
       icon: FaClock,
       title: 'Flexible Timing',
-      description: 'Multiple batch timings to fit your schedule and convenience.',
-      color: '#ffde6a',
+      description: 'Multiple schedules designed to fit your busy life.',
     },
     {
       icon: FaHandshake,
-      title: 'Career Guidance',
-      description: 'Comprehensive career counseling and future planning support.',
-      color: '#daeb68',
+      title: 'Trusted Support',
+      description: 'Friendly guidance and ongoing academic help.',
     },
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="why-choose-us" className="relative overflow-hidden bg-[#08162f] py-20">
+      <div className="absolute left-0 top-16 h-44 w-44 rounded-full bg-[#ff8c42]/15 blur-3xl" />
+      <div className="absolute right-0 top-24 h-56 w-56 rounded-full bg-[#ffb26a]/10 blur-3xl" />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -53,15 +50,16 @@ export default function WhyChooseUs() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-[#024b6f] mb-4">
-            Why Choose <span className="text-[#d63137]">Us?</span>
+          <p className="text-sm uppercase tracking-[0.35em] text-[#ffb26a]/80">Why choose us</p>
+          <h2 className="mt-4 text-4xl font-bold text-white sm:text-5xl">
+            Premium benefits for every Quran learner
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover what makes MCC Classes the preferred choice for thousands of students.
+          <p className="mx-auto mt-6 max-w-3xl text-base text-slate-300 sm:text-lg">
+            We combine high-quality teaching, flexible schedules and proven results to make learning easy and effective.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -69,28 +67,21 @@ export default function WhyChooseUs() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.8 }}
               viewport={{ once: true }}
-              whileHover={{ y: -10, scale: 1.05 }}
-              className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100"
+              whileHover={{ y: -10 }}
+              className="relative overflow-hidden rounded-[20px] border border-white/10 bg-[#0f294f]/90 p-8 shadow-2xl shadow-[#020d20]/40"
             >
-              <motion.div
-                whileHover={{ rotate: 360 }}
-                transition={{ duration: 0.5 }}
-                className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-6"
-                style={{ backgroundColor: feature.color }}
-              >
-                <feature.icon size={24} className="text-[#024b6f]" />
-              </motion.div>
+              <div className="absolute -left-10 top-10 h-28 w-28 rounded-full bg-[#ff8c42]/15 blur-3xl" />
+              <div className="absolute right-8 top-6 h-16 w-16 rounded-full bg-[#ffb26a]/20 blur-2xl" />
 
-              <h3 className="text-2xl font-bold text-[#024b6f] mb-4">{feature.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+              <div className="relative z-10">
+                <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-xl bg-[#ff8c42]/15 text-2xl text-[#ffb26a]">
+                  <feature.icon />
+                </div>
+                <h3 className="text-2xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-slate-300 leading-relaxed">{feature.description}</p>
+              </div>
 
-              <motion.div
-                initial={{ width: 0 }}
-                whileInView={{ width: '100%' }}
-                transition={{ delay: index * 0.1 + 0.5, duration: 0.8 }}
-                viewport={{ once: true }}
-                className="h-1 bg-gradient-to-r from-[#024b6f] to-[#d63137] rounded-full mt-6"
-              />
+              <div className="absolute inset-x-8 bottom-8 h-px bg-white/10" />
             </motion.div>
           ))}
         </div>
@@ -100,20 +91,22 @@ export default function WhyChooseUs() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mt-16"
+          className="mt-16"
         >
-          <div className="bg-gradient-to-r from-[#024b6f] to-[#d63137] rounded-2xl p-8 text-white">
-            <h3 className="text-3xl font-bold mb-4">Ready to Start Your Journey?</h3>
-            <p className="text-xl mb-6 text-[#ffde6a]">
-              Join thousands of successful students who chose MCC Classes for their bright future.
-            </p>
-            <motion.button
-              whileHover={{ scale: 1.05, boxShadow: '0 0 20px rgba(255, 222, 106, 0.5)' }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-[#ffde6a] to-[#daeb68] text-[#024b6f] px-10 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              Get Started Today
-            </motion.button>
+          <div className="relative overflow-hidden rounded-[20px] border border-white/10 bg-[#e3c8b6] p-10 shadow-2xl shadow-[#020d20]/40">
+            <div className="absolute -left-16 top-8 h-28 w-28 rounded-full bg-[#ff8c42]/15 blur-3xl" />
+            <div className="absolute right-8 top-10 h-20 w-20 rounded-full bg-[#ffb26a]/20 blur-2xl" />
+
+            <div className="relative z-10 flex flex-col items-center gap-6 text-center">
+              <p className="text-sm uppercase tracking-[0.35em] ">Start your success story</p>
+              <h3 className="text-3xl font-bold text-[#06102d] sm:text-4xl">The best choice for Quran learners</h3>
+              <p className="max-w-2xl text-base text-[#574f5a] sm:text-lg">
+                Unlock your potential with expert tutors, modern curriculum, and support designed for fast progress.
+              </p>
+              <button className="inline-flex items-center justify-center rounded-full bg-[#ff8c42] px-10 py-4 text-sm font-semibold text-slate-950 transition hover:bg-[#ff9b34]">
+                Get Started Today
+              </button>
+            </div>
           </div>
         </motion.div>
       </div>

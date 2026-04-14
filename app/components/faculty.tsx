@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaFacebook, FaTwitter, FaLinkedin, FaEnvelope } from 'react-icons/fa';
@@ -6,42 +6,45 @@ import { FaFacebook, FaTwitter, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 export default function Faculty() {
   const faculty = [
     {
-      name: 'Dr. Rajesh Kumar',
-      role: 'Mathematics Expert',
+      name: 'Ustadh Ahmed Khan',
+      role: 'Quran & Tajweed Teacher',
       experience: '15 years',
-      qualifications: 'PhD Mathematics, IIT Delhi',
-      image: '/faculty1.jpg', // Placeholder
-      social: { facebook: '#', twitter: '#', linkedin: '#', email: 'rajesh@mcc.com' },
+      qualifications: 'Alim from Darul Uloom Deoband',
+      image: '/faculty1.jpg',
+      social: { facebook: '#', twitter: '#', linkedin: '#', email: 'ahmed@mcc.com' },
     },
     {
-      name: 'Ms. Priya Sharma',
-      role: 'Science Faculty',
+      name: 'Ustadha Fatima Noor',
+      role: 'Islamic Studies Mentor',
       experience: '12 years',
-      qualifications: 'MSc Physics, Delhi University',
-      image: '/faculty2.jpg', // Placeholder
-      social: { facebook: '#', twitter: '#', linkedin: '#', email: 'priya@mcc.com' },
+      qualifications: 'MA Islamic Studies, Jamia Millia',
+      image: '/faculty2.jpg',
+      social: { facebook: '#', twitter: '#', linkedin: '#', email: 'fatima@mcc.com' },
     },
     {
-      name: 'Mr. Amit Singh',
-      role: 'English Teacher',
+      name: 'Ustadh Salman Raza',
+      role: 'Memorization Coach',
       experience: '10 years',
-      qualifications: 'MA English, JNU',
-      image: '/faculty3.jpg', // Placeholder
-      social: { facebook: '#', twitter: '#', linkedin: '#', email: 'amit@mcc.com' },
+      qualifications: 'Hafiz-ul-Quran, Ijazah in Tajweed',
+      image: '/faculty3.jpg',
+      social: { facebook: '#', twitter: '#', linkedin: '#', email: 'salman@mcc.com' },
     },
     {
-      name: 'Dr. Sunita Gupta',
-      role: 'Chemistry Expert',
+      name: 'Ustadha Ayesha Siddiqui',
+      role: 'Online Learning Specialist',
       experience: '14 years',
-      qualifications: 'PhD Chemistry, AIIMS',
-      image: '/faculty4.jpg', // Placeholder
-      social: { facebook: '#', twitter: '#', linkedin: '#', email: 'sunita@mcc.com' },
+      qualifications: 'M.Ed & Certified Tutor',
+      image: '/faculty4.jpg',
+      social: { facebook: '#', twitter: '#', linkedin: '#', email: 'ayesha@mcc.com' },
     },
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="faculty" className="relative overflow-hidden bg-[#08162f] py-20 text-white">
+      <div className="absolute left-0 top-16 h-44 w-44 rounded-full bg-[#ff8c42]/15 blur-3xl" />
+      <div className="absolute right-0 top-24 h-56 w-56 rounded-full bg-[#ffb26a]/10 blur-3xl" />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -49,78 +52,80 @@ export default function Faculty() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-[#024b6f] mb-4">
-            Our <span className="text-[#d63137]">Faculty</span>
+          <p className="text-sm uppercase tracking-[0.35em] text-[#ffb26a]/80">Our Faculty</p>
+          <h2 className="mt-4 text-4xl font-bold text-white sm:text-5xl">
+            Meet the MCC Classes teaching team
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Meet our team of experienced and dedicated educators committed to your success.
+          <p className="mx-auto mt-6 max-w-3xl text-base text-slate-300 sm:text-lg">
+            Our faculty brings Quran expertise, modern teaching experience, and personalized support to every student.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {faculty.map((member, index) => (
             <motion.div
               key={member.name}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.2, duration: 0.8 }}
+              transition={{ delay: index * 0.1, duration: 0.8 }}
               viewport={{ once: true }}
               whileHover={{ y: -10 }}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 border border-gray-100"
+              className="relative overflow-hidden rounded-[16px] border border-white/10 bg-[#0f294f]/90 shadow-2xl shadow-[#020d20]/40"
             >
-              <div className="relative">
-                <div className="w-full h-64 bg-gradient-to-br from-[#024b6f] to-[#d63137] flex items-center justify-center">
-                  <div className="text-6xl text-white font-bold">
-                    {member.name.split(' ').map(n => n[0]).join('')}
+              <div className="relative h-72 overflow-hidden rounded-t-[16px] bg-gradient-to-br from-[#0f294f] via-[#112d58] to-[#08162f]">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,140,66,0.18),_transparent_35%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_rgba(255,187,106,0.14),_transparent_35%)]" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="flex h-28 w-28 items-center justify-center rounded-full border border-white/10 bg-white/10 text-4xl font-semibold text-white">
+                    {member.name.split(' ').map((n) => n[0]).join('')}
                   </div>
                 </div>
-                <div className="absolute inset-0 bg-black/20 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="flex space-x-4">
+                <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#08162f] via-[#08162f]/90 to-transparent" />
+              </div>
+
+              <div className="relative z-10 py-8 px-4">
+                <h3 className="text-2xl font-semibold text-white mb-2">{member.name}</h3>
+                <p className="text-[#ffb26a] font-medium mb-4">{member.role}</p>
+                <p className="text-slate-300 text-sm leading-relaxed mb-6">{member.qualifications}</p>
+                <div className="mb-6 flex items-center justify-between rounded-3xl bg-white/5 p-4 text-sm text-slate-300">
+                  <span>Experience</span>
+                  <span className="font-semibold text-white">{member.experience}</span>
+                </div>
+                <div className="flex items-center justify-between gap-3">
+                  {member.social.facebook && (
                     <motion.a
-                      whileHover={{ scale: 1.2 }}
+                      whileHover={{ scale: 1.1 }}
                       href={member.social.facebook}
-                      className="bg-white/20 p-3 rounded-full text-white hover:bg-white hover:text-[#024b6f] transition-colors duration-300"
+                      className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-[#ffb26a] transition"
                     >
                       <FaFacebook />
                     </motion.a>
+                  )}
+                  {member.social.twitter && (
                     <motion.a
-                      whileHover={{ scale: 1.2 }}
+                      whileHover={{ scale: 1.1 }}
                       href={member.social.twitter}
-                      className="bg-white/20 p-3 rounded-full text-white hover:bg-white hover:text-[#024b6f] transition-colors duration-300"
+                      className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-[#ffb26a] transition"
                     >
                       <FaTwitter />
                     </motion.a>
+                  )}
+                  {member.social.linkedin && (
                     <motion.a
-                      whileHover={{ scale: 1.2 }}
+                      whileHover={{ scale: 1.1 }}
                       href={member.social.linkedin}
-                      className="bg-white/20 p-3 rounded-full text-white hover:bg-white hover:text-[#024b6f] transition-colors duration-300"
+                      className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-[#ffb26a] transition"
                     >
                       <FaLinkedin />
                     </motion.a>
-                    <motion.a
-                      whileHover={{ scale: 1.2 }}
-                      href={`mailto:${member.social.email}`}
-                      className="bg-white/20 p-3 rounded-full text-white hover:bg-white hover:text-[#024b6f] transition-colors duration-300"
-                    >
-                      <FaEnvelope />
-                    </motion.a>
-                  </div>
-                </div>
-              </div>
-
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-[#024b6f] mb-2">{member.name}</h3>
-                <p className="text-[#d63137] font-semibold mb-2">{member.role}</p>
-                <p className="text-gray-600 text-sm mb-3">{member.qualifications}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-500 text-sm">Experience: {member.experience}</span>
-                  {/* <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="bg-gradient-to-r from-[#024b6f] to-[#d63137] text-white px-4 py-2 rounded-full text-sm font-semibold hover:shadow-lg transition-all duration-300"
+                  )}
+                  <motion.a
+                    whileHover={{ scale: 1.1 }}
+                    href={`mailto:${member.social.email}`}
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-[#ffb26a] transition"
                   >
-                    View Profile
-                  </motion.button> */}
+                    <FaEnvelope />
+                  </motion.a>
                 </div>
               </div>
             </motion.div>
@@ -134,18 +139,19 @@ export default function Faculty() {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <div className="bg-gradient-to-r from-[#024b6f] to-[#d63137] rounded-2xl p-8 text-white">
-            <h3 className="text-3xl font-bold mb-4">Join Our Team</h3>
-            <p className="text-xl mb-6 text-[#ffde6a]">
-              We're always looking for passionate educators to join our mission.
-            </p>
-            <motion.button
-              whileHover={{ scale: 1.05, boxShadow: '0 0 20px rgba(255, 222, 106, 0.5)' }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-[#ffde6a] to-[#daeb68] text-[#024b6f] px-10 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              Apply Now
-            </motion.button>
+          <div className="relative overflow-hidden rounded-[20px] border border-white/10 bg-[#e3c8b6] p-10 shadow-2xl shadow-[#020d20]/40">
+            <div className="absolute -left-16 top-8 h-28 w-28 rounded-full bg-[#ff8c42]/15 blur-3xl" />
+            <div className="absolute right-8 top-10 h-20 w-20 rounded-full bg-[#ffb26a]/20 blur-2xl" />
+            <div className="relative z-10">
+              <p className="text-sm uppercase tracking-[0.35em] text-[black]">Join our faculty</p>
+              <h3 className="mt-4 text-3xl font-bold text-[#06102d]">Become part of MCC Classes</h3>
+              <p className="mx-auto mt-4 max-w-2xl text-[#574f5a] leading-relaxed">
+                We are looking for experienced Quran tutors and educators who love teaching with clarity and care.
+              </p>
+              <button className="mt-10 inline-flex items-center justify-center rounded-full bg-[#ff8c42] px-10 py-4 text-sm font-semibold text-slate-950 transition hover:bg-[#ff9b34]">
+                Apply Now
+              </button>
+            </div>
           </div>
         </motion.div>
       </div>
