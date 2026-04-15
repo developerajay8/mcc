@@ -51,8 +51,9 @@ export default function WhyChooseUs() {
           className="text-center mb-16"
         >
           <p className="text-sm uppercase tracking-[0.35em] text-[#ffb26a]/80">Why choose us</p>
-          <h2 className="mt-4 text-4xl font-bold text-white sm:text-5xl">
-            Premium benefits for every commerce aspirant
+          <h2 className="mt-4 text-4xl font-bold text-white sm:text-5xl md:leading-17">
+            Specialized Commerce Coaching
+Focused classes for Ca, CMA, XI-XII Commerce
           </h2>
           <p className="mx-auto mt-6 max-w-3xl text-base text-slate-300 sm:text-lg">
             We combine industry-focused coaching, exam-ready study plans and personalised mentoring to drive your highest results.

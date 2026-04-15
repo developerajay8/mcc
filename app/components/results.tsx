@@ -7,13 +7,13 @@ export default function Results() {
   const achievements = [
     {
       icon: FaTrophy,
-      number: '95%',
+      number: '99%',
       title: 'Pass Rate',
       description: 'Our students consistently achieve outstanding results',
     },
     {
       icon: FaMedal,
-      number: '500+',
+      number: '100+',
       title: 'Top Rankers',
       description: 'Students securing top positions in board exams',
     },

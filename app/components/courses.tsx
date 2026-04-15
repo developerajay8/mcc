@@ -67,7 +67,7 @@ export default function Courses() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            Our <span className="text-[#ffb26a]">Commerce</span> Programs
+            Career-Focused <span className="text-[#ffb26a]">Commerce </span>Programs
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             Tailored coaching for CA, CMA, CUET and XI-XII commerce students with expert faculty and proven results.

@@ -6,52 +6,52 @@ import { FaQuoteLeft, FaStar, FaChevronLeft, FaChevronRight } from 'react-icons/
 export default function Testimonials() {
   const testimonials = [
     {
-      name: 'Amina Khan',
-      role: 'Class 12 Student',
-      date: 'Apr 20, 2024',
+      name: 'Tanushka gupta',
+      role: 'CA and CMA ',
+      date: '',
       rating: 4.9,
-      quote: 'MCC Classes helped me prepare for boards with confidence. The live classes and teacher support made all the difference in my success.',
-      initials: 'AK',
+      quote: 'The best commerce class I seen ever for CA and CMA course , the facilities of this institute is very best lovely teachers These institutes promise to help children reach their goals Do visit Mahendra Commerce Class once👍',
+      initials: 'TG',
     },
     {
-      name: 'Imran Siddiqui',
-      role: 'JEE Aspirant',
-      date: 'May 15, 2024',
+      name: 'Seema Singh',
+      role: 'CA Foundation',
+      date: '',
       rating: 4.9,
-      quote: 'The teaching style is clear and focused. I improved my problem solving and timing through daily practice sessions. Highly recommended!',
-      initials: 'IS',
+      quote: 'Agar aapko CA Foundation coaching near me chahiye, toh Mahendra Commerce Classes best hai. Yahan ke teachers har topic ko thoroughly explain karte hain aur regular tests bhi lete ha...',
+      initials: 'SG',
     },
     {
-      name: 'Sana Raza',
-      role: 'NEET Student',
-      date: 'Jun 01, 2024',
+      name: 'Priya Rajawat',
+      role: 'CA foundation',
+      date: '',
       rating: 4.9,
-      quote: 'Personalized doubt clearing and regular tests gave me the confidence to score high. MCC Classes is the best choice for serious learners.',
-      initials: 'SR',
+      quote: 'The CA foundation classes at Mahindra commerce classes are excellent. The teacher explain everything so clearly, even the tough topics.',
+      initials: 'PR',
     },
     {
-      name: 'Rahul Sharma',
-      role: 'Class 10 Student',
-      date: 'Jul 10, 2024',
+      name: 'Nandani Sharma',
+      role: 'Class 12 commerce',
+      date: '',
       rating: 4.8,
-      quote: 'The interactive sessions and study materials are top-notch. I scored 95% in my exams thanks to MCC Classes guidance.',
-      initials: 'RS',
+      quote: 'mahendra commecre classes sanganer ka best institute haii...agr aap chate hai ki aapka future bright ho toh aap mahendra commerce classes join kre..yha ki facilities best hai..teachers bhii best..agar aap sach me chahte hai aapka future bright ho toh aap MAHENDRA COMMERCE CLASSES join kree👍🏻',
+      initials: 'NS',
     },
     {
-      name: 'Priya Patel',
-      role: 'NEET Aspirant',
-      date: 'Aug 05, 2024',
+      name: 'Sanjay Patel',
+      role: 'CMA coaching',
+      date: '',
       rating: 4.9,
-      quote: 'Excellent faculty and structured curriculum. The mock tests really helped me understand my strengths and weaknesses.',
-      initials: 'PP',
+      quote: 'I was looking for CMA coaching near me,and Mahendra commerce classes was the perfect choice.The teachers are amazing and really helped me understand the concepts.',
+      initials: 'SP',
     },
     {
-      name: 'Vikram Singh',
-      role: 'JEE Student',
-      date: 'Sep 12, 2024',
+      name: 'Hansa Bhomia',
+      role: 'MCC Classes',
+      date: '',
       rating: 4.9,
-      quote: 'MCC Classes transformed my approach to competitive exams. The mentors are knowledgeable and always available for support.',
-      initials: 'VS',
+      quote: 'MCC is one of the best institution in the field of education.The faculty of the institute is very knowledgeable & good in nature.I recommend everyone to visit once before taking admission anywhere',
+      initials: 'HB',
     },
   ];
 
@@ -88,7 +88,7 @@ export default function Testimonials() {
         >
           <p className="text-sm uppercase tracking-[0.35em] text-[#ffb26a]/80">What our students say</p>
           <h2 className="mt-4 text-4xl font-bold text-white sm:text-5xl">
-            Our Trusted Client Testimonials
+            Our Trusted Students Testimonials
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-slate-300 sm:text-lg">
             Real results, real progress — hear from students who achieved more with MCC Classes.

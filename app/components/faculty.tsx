@@ -6,7 +6,7 @@ import { FaArrowLeft, FaArrowRight, FaAward, FaEnvelope } from 'react-icons/fa';
 export default function Faculty() {
   const awards = [
     {
-      image: '/1.png',
+      image: '/image copy.png',
     },
      {
       image: '/2.png',
@@ -34,6 +34,9 @@ export default function Faculty() {
     },
      {
       image: '/10.png',
+    },
+    {
+      image: '/1.png',
     }
     
   ];
@@ -70,9 +73,9 @@ export default function Faculty() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="relative overflow-hidden rounded-[36px] border border-white/10 bg-[#0f294f]/90 p-8 shadow-2xl shadow-[#020d20]/40"
+          className="relative overflow-hidden rounded-[36px] border border-white/10 bg-[#0f294f]/90 sm:p-8 p-4 shadow-2xl shadow-[#020d20]/40"
         >
-          <div className="absolute top-6 left-6 h-24 w-24 rounded-full bg-[#ff8c42]/15 blur-3xl" />
+          <div className="absolute top-6 left-6  h-24 w-24 rounded-full bg-[#ff8c42]/15 blur-3xl" />
           <div className="absolute right-6 top-10 h-20 w-20 rounded-full bg-[#ffb26a]/10 blur-3xl" />
 
           <div className="relative">
@@ -94,7 +97,7 @@ export default function Faculty() {
             <motion.img
               key={currentIndex}
               src={awards[currentIndex].image}
-              className="sm:h-[500px] h-[450px] w-full rounded-[28px] object-cover"
+              className=" w-full rounded-[28px] object-cover"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.4 }}
