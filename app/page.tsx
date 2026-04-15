@@ -7,7 +7,7 @@ import AboutUs from "./components/about-us";
 import Faculty from "./components/faculty";
 import Team from "./components/team";
 import Testimonials from "./components/testimonials";
-import Gallery from "./components/gallery";
+// import Gallery from "./components/gallery";
 import Contact from "./components/contact";
 import FinalCTA from "./components/final-cta";
 
@@ -23,7 +23,7 @@ export default function Home() {
     <Faculty/>
     <Team/>
     <Testimonials/>
-    <Gallery/>
+    {/* <Gallery/> */}
     <Contact/>
  </div>
   );

@@ -17,11 +17,13 @@ export default function Footer() {
   ];
 
   const courses = [
-    'CA Foundation Coaching',
-    'XI-XII Commerce Board Success',
-    'CMA Foundation Mastery',
-    'CMA Inter Accelerator',
-    'CUET / Commerce Entrance Prep'
+    'CMA Foundation',
+    'CMA Inter',
+    'CMA Final',
+    'CA Foundation',
+    '11th + 12th Commerce',
+    '11th + 12th + CA Foundation',
+    '12th + CMA Foundation'
   ];
 
   const socialLinks = [
