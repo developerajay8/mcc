@@ -38,7 +38,7 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section id="why-choose-us" className="relative overflow-hidden bg-[#08162f] py-20">
+    <section id="why-choose-us" className="relative overflow-hidden bg-[#08162f] pb-20">
       <div className="absolute left-0 top-16 h-44 w-44 rounded-full bg-[#ff8c42]/15 blur-3xl" />
       <div className="absolute right-0 top-24 h-56 w-56 rounded-full bg-[#ffb26a]/10 blur-3xl" />
 

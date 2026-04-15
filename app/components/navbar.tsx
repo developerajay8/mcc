@@ -32,9 +32,9 @@ export default function Navbar() {
             <Image
               src="/logo.png"
               alt="MCC Classes Logo"
-              width={50}
-              height={50}
-              className="rounded-full border-2 border-[#ffde6a]"
+              width={70}
+              height={70}
+              className="rounded-full "
             />
           </motion.div>
 

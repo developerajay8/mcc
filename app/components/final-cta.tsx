@@ -76,7 +76,7 @@ export default function FinalCTA() {
                   </div>
                   <div>
                     <p className="text-[#06102d] font-semibold">Call for Admission</p>
-                    <p className="text-[black]">+91 98765 43210</p>
+                    <p className="text-[black]">+91 76888 26669</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4 text-center mx-auto">

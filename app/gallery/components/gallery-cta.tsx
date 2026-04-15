@@ -109,7 +109,7 @@ export default function GalleryCTA() {
               Stay updated with the latest photos, videos, and announcements from MCC Classes. Follow our social media channels for daily updates!
             </p>
             <div className="flex justify-center gap-4 flex-wrap">
-              {['Facebook', 'Instagram', 'YouTube', 'Twitter'].map((social) => (
+              {['Instagram', 'YouTube'].map((social) => (
                 <motion.button
                   key={social}
                   whileHover={{ scale: 1.05 }}

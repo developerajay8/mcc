@@ -17,20 +17,17 @@ export default function Footer() {
   ];
 
   const courses = [
-    'Mathematics Excellence',
-    'Science Mastery',
-    'English Proficiency',
-    'JEE Preparation',
-    'NEET Preparation',
-    'Board Exam Coaching',
+    'CA Foundation Coaching',
+    'XI-XII Commerce Board Success',
+    'CMA Foundation Mastery',
+    'CMA Inter Accelerator',
+    'CUET / Commerce Entrance Prep'
   ];
 
   const socialLinks = [
-    { icon: FaFacebook, href: '#', label: 'Facebook' },
-    { icon: FaTwitter, href: '#', label: 'Twitter' },
-    { icon: FaInstagram, href: '#', label: 'Instagram' },
-    { icon: FaLinkedin, href: '#', label: 'LinkedIn' },
-    { icon: FaYoutube, href: '#', label: 'YouTube' },
+
+    { icon: FaInstagram, href: '#', label: 'Instagram' }
+    
   ];
 
   return (
@@ -49,13 +46,7 @@ export default function Footer() {
             className="space-y-6"
           >
             <div className="flex items-center space-x-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#ffb26a]/30 bg-[#ff8c42]/20 text-2xl font-bold text-[#ffb26a]">
-                MC
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-white">MCC Classes</h3>
-                <p className="text-[#ffb26a]">Excellence in Education</p>
-              </div>
+              <img src="/logo.png" className='rounded-full w-[80]' alt="" />
             </div>
             <p className="text-slate-300 leading-relaxed">
               Empowering students with quality education and innovative learning methods
@@ -144,16 +135,18 @@ export default function Footer() {
                   <FaMapMarkerAlt className="text-[#ffb26a] flex-shrink-0" />
                 </div>
                 <div className="text-slate-300">
-                  <p className="font-medium">MCC Classes Institute</p>
-                  <p>123 Education Street, Connaught Place</p>
-                  <p>New Delhi, India - 110001</p>
+                  {/* <p className="font-medium">MCC Classes Institute</p> */}
+                  <p>Dada Gurudev Nagar, Diggi Malpura Rd Sanganer, Jaipur - 302029
+
+</p>
+                  <p></p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="bg-[#ff8c42]/20 p-2 rounded-lg">
                   <FaPhone className="text-[#ffb26a] flex-shrink-0" />
                 </div>
-                <p className="text-slate-300">+91 98765 43210</p>
+                <p className="text-slate-300">+91 76888 26669</p>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="bg-[#ff8c42]/20 p-2 rounded-lg">

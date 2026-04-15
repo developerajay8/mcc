@@ -32,8 +32,8 @@ export default function ContactHero() {
             {
               icon: FaPhone,
               title: 'Call Us',
-              desc: '+92 (300) 1234567',
-              subtext: 'Monday to Friday, 9am-6pm',
+              desc: '+91 76888 26669',
+              subtext: 'Monday to Friday, 9am-7pm',
             },
             {
               icon: FaEnvelope,
@@ -44,7 +44,7 @@ export default function ContactHero() {
             {
               icon: FaMapMarkerAlt,
               title: 'Visit Us',
-              desc: 'Islamabad, Pakistan',
+              desc: 'Dada Gurudev Nagar, Diggi Malpura Rd Sanganer, Jaipur - 302029',
               subtext: 'By appointment',
             },
           ].map((item, index) => (

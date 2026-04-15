@@ -108,7 +108,7 @@ export default function ContactForm() {
                   value={formData.phone}
                   onChange={handleChange}
                   className="w-full px-6 py-3 rounded-xl border border-white/20 bg-white/5 text-white placeholder-slate-400 focus:outline-none focus:border-[#ff8c42]/50 focus:bg-white/10 transition"
-                  placeholder="+92 (300) 1234567"
+                  placeholder="+91 76888 26669"
                 />
               </motion.div>
 

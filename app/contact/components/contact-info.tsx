@@ -9,7 +9,7 @@ export default function ContactInfo() {
     {
       city: 'Islamabad',
       address: 'Plot 123, Sector G-7, Islamabad, Pakistan',
-      phone: '+92 (300) 1234567',
+      phone: '+91 76888 26669',
       email: 'update@gmail.com',
       hours: 'Mon-Fri: 9am-6pm, Sat: 10am-4pm',
       icon: FaMapMarkerAlt,
@@ -37,7 +37,7 @@ export default function ContactInfo() {
       icon: FaPhone,
       title: 'Phone Support',
       description: 'Call us directly for immediate assistance',
-      detail: '+92 (300) 1234567',
+      detail: '+91 76888 26669',
     },
     {
       icon: FaGlobe,
@@ -49,7 +49,7 @@ export default function ContactInfo() {
       icon: FaClock,
       title: 'WhatsApp Chat',
       description: 'Quick messaging for urgent matters',
-      detail: '+92 (300) 1234567',
+      detail: '+91 76888 26669',
     },
   ];
 
@@ -59,7 +59,7 @@ export default function ContactInfo() {
       <div className="absolute right-0 bottom-0 h-72 w-72 rounded-full bg-[#ffb26a]/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -73,9 +73,9 @@ export default function ContactInfo() {
           <p className="mx-auto mt-4 max-w-3xl text-base text-slate-300 sm:text-lg">
             Find us at convenient locations in major cities. Book an appointment to visit our offices.
           </p>
-        </motion.div>
+        </motion.div> */}
 
-        <div className="grid gap-8 md:grid-cols-3 mb-20">
+        {/* <div className="grid gap-8 md:grid-cols-3 mb-20">
           {locations.map((location, index) => (
             <motion.div
               key={index}
@@ -135,7 +135,7 @@ export default function ContactInfo() {
               </motion.button>
             </motion.div>
           ))}
-        </div>
+        </div> */}
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}

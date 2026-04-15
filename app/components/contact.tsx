@@ -8,7 +8,6 @@ export default function Contact() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
     phone: '',
     subject: '',
     message: '',
@@ -30,7 +29,7 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
-    setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+    setFormData({ name: '', phone: '', subject: '', message: '' });
     setIsModalOpen(false);
   };
 
@@ -42,7 +41,7 @@ export default function Contact() {
     {
       icon: FaMapMarkerAlt,
       title: 'Visit Us',
-      details: ['Mahendra Commerce Classes', 'Dada Gurudev Nagar, Diggi Malpura Rd', 'Sanganer, Jaipur - 302029'],
+      details: ['Address', 'Dada Gurudev Nagar, Diggi Malpura Rd', 'Sanganer, Jaipur - 302029'],
     },
     {
       icon: FaPhone,
@@ -56,7 +55,7 @@ export default function Contact() {
     },
     {
       icon: FaClock,
-      title: 'Working Hours',
+      title: 'Clasess Hours',
       details: ['Mon - Sat: 8:00 AM - 8:00 PM', 'Sunday: 10:00 AM - 4:00 PM'],
     },
   ];
@@ -129,17 +128,15 @@ export default function Contact() {
             viewport={{ once: true }}
             className="relative overflow-hidden rounded-[16px] border border-white/10 bg-[#0c1c3b]/90 p-8 shadow-2xl shadow-[#020d20]/40"
           >
-            <div className="absolute -top-0 left-1/2 -translate-x-1/2 rounded-full border-4 border-[#08162f] bg-[#0f294f]/90 p-4">
-              <FaPaperPlane className="text-[#ffb26a] text-2xl" />
-            </div>
+            
 
-            <div className="mt-8">
+            <div className="mt-4">
               <h3 className="text-2xl font-bold text-white mb-2 text-center">Send us a Message</h3>
               <p className="text-slate-300 text-center mb-8">Our team responds within 24 hours</p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1  gap-6">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -158,23 +155,7 @@ export default function Contact() {
                   />
                 </motion.div>
 
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2, duration: 0.8 }}
-                  viewport={{ once: true }}
-                >
-                  <label className="block text-sm font-medium text-slate-300 mb-2">Email Address</label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-slate-400 focus:ring-2 focus:ring-[#ff8c42] focus:border-transparent transition-all duration-300"
-                    placeholder="your@email.com"
-                  />
-                </motion.div>
+                
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -280,20 +261,20 @@ export default function Contact() {
 
             {/* Modal Header */}
             <div className="relative p-8 pb-6">
-              <div className="absolute -top-0 left-1/2 -translate-x-1/2 rounded-full border-4 border-[#08162f] bg-[#0f294f]/90 p-4">
+              <div className="absolute -top-0 left-1/2 -translate-x-1/2 sm:block hidden rounded-full border-4 border-[#08162f] bg-[#0f294f]/90 p-4">
                 <FaPaperPlane className="text-[#ffb26a] text-2xl" />
               </div>
 
-              <div className="mt-8 text-center">
-                <h3 className="text-3xl font-bold text-white mb-2">Get Started Today!</h3>
-                <p className="text-slate-300">Join thousands of successful commerce students. Fill out the form below and we'll get back to you within 24 hours.</p>
+              <div className="sm:mt-8 mt-6 text-center">
+                <h3 className="sm:text-3xl text-2xl font-bold text-white mb-2">Get Started Today!</h3>
+                <p className="text-slate-300 sm:text-[16px] text-[12px]">Join thousands of successful commerce students. Fill out the form below and we'll get back to you within 24 hours.</p>
               </div>
             </div>
 
             {/* Modal Form */}
-            <div className="px-8 pb-8">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="sm:px-8 px-2 pb-8">
+              <form onSubmit={handleSubmit} className="sm:space-y-6 space-y-2">
+                <div className="grid grid-cols-1 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-slate-300 mb-2">Full Name</label>
                     <input
@@ -307,18 +288,7 @@ export default function Contact() {
                     />
                   </div>
 
-                  <div>
-                    <label className="block text-sm font-medium text-slate-300 mb-2">Email Address</label>
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-slate-400 focus:ring-2 focus:ring-[#ff8c42] focus:border-transparent transition-all duration-300"
-                      placeholder="your@email.com"
-                    />
-                  </div>
+                 
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

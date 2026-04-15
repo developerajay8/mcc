@@ -52,7 +52,7 @@ export default function ContactSupport() {
         },
         {
           q: 'What if I have technical issues?',
-          a: 'Contact our technical support at update@gmail.com or call +92 (300) 1234567. We usually respond within 2 hours.',
+          a: 'Contact our technical support at update@gmail.com or call +91 76888 26669. We usually respond within 2 hours.',
         },
         {
           q: 'Can I download course content?',

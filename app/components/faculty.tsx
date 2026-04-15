@@ -76,66 +76,54 @@ export default function Faculty() {
           <div className="absolute top-6 left-6 h-24 w-24 rounded-full bg-[#ff8c42]/15 blur-3xl" />
           <div className="absolute right-6 top-10 h-20 w-20 rounded-full bg-[#ffb26a]/10 blur-3xl" />
 
-          <div className="relative z-10 grid gap-8 lg:grid-cols-[1.2fr_0.8fr] items-center">
-            <div className="relative rounded-[32px] overflow-hidden border border-white/10 bg-[#08162f]/90 shadow-inner shadow-[#000000]/20">
-              <img
-                src={awards[currentIndex].image}
-                alt={awards[currentIndex].name}
-                className="h-[530px] w-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#08162f] via-transparent to-[#08162f]/70" />
-              <div className="absolute left-6 bottom-6 right-6 rounded-[26px] border border-white/10 bg-[#08162f]/80 p-6 backdrop-blur-xl">
-                <div className="flex items-center gap-3 text-[#ffb26a] font-semibold uppercase tracking-[0.3em] text-sm">
-                  <FaAward />
-                  Awarded {awards[currentIndex].year}
-                </div>
-                <h3 className="mt-4 text-3xl font-bold text-white">{awards[currentIndex].achievement}</h3>
-                <p className="mt-3 text-slate-300 leading-relaxed">{awards[currentIndex].details}</p>
-                <p className="mt-4 text-[#ffb26a] font-semibold">{awards[currentIndex].award}</p>
-              </div>
+          <div className="relative">
+            <button
+              type="button"
+              onClick={prevAward}
+              className="absolute sm:block hidden left-4 top-1/2 z-20 -translate-y-1/2 rounded-full border border-white/10 bg-black/40 p-3 text-white transition hover:bg-black/60"
+            >
+              <FaArrowLeft />
+            </button>
+            <button
+              type="button"
+              onClick={nextAward}
+              className="absolute sm:block hidden right-4 top-1/2 z-20 -translate-y-1/2 rounded-full border border-white/10 bg-black/40 p-3 text-white transition hover:bg-black/60"
+            >
+              <FaArrowRight />
+            </button>
+
+            <motion.img
+              key={currentIndex}
+              src={awards[currentIndex].image}
+              alt={awards[currentIndex].name}
+              className="sm:h-[500px] h-[450px] w-full rounded-[28px] object-cover"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.4 }}
+            />
+            
+
+            <div className="sm:block hidden absolute bottom-6 left-6 right-6 rounded-[28px] bg-slate-950/85 p-6 text-white shadow-2xl shadow-slate-950/40 backdrop-blur-md">
+              <p className="text-xs uppercase tracking-[0.35em] text-[#ffb26a]/80">Award Winner</p>
+              <h3 className="mt-3 text-2xl font-semibold">{awards[currentIndex].name}</h3>
+              <p className="mt-2 text-sm text-slate-300">{awards[currentIndex].achievement}</p>
+              <p className="mt-3 text-sm text-slate-300">{awards[currentIndex].details}</p>
             </div>
 
-            <div className="space-y-6">
-              <div className="rounded-[32px] border border-white/10 bg-[#0c1c3b]/90 p-8 shadow-2xl shadow-[#020d20]/40">
-                <h3 className="text-xl font-bold text-white mb-4">Top Ranker Profile</h3>
-                <p className="text-slate-300 mb-4">Name: <span className="text-white font-semibold">{awards[currentIndex].name}</span></p>
-                <p className="text-slate-300 mb-4">Award: <span className="text-white font-semibold">{awards[currentIndex].award}</span></p>
-                <p className="text-slate-300 mb-4">Achievement: <span className="text-white font-semibold">{awards[currentIndex].achievement}</span></p>
-                <p className="text-slate-300">Year: <span className="text-white font-semibold">{awards[currentIndex].year}</span></p>
-              </div>
-
-              <div className="grid gap-4 sm:grid-cols-2">
-                <button
-                  onClick={prevAward}
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-[#ff8c42] px-6 py-4 font-semibold text-slate-950 hover:bg-[#ffb26a] transition"
-                >
-                  <FaArrowLeft /> Previous
-                </button>
-                <button
-                  onClick={nextAward}
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-[#ff8c42] px-6 py-4 font-semibold text-slate-950 hover:bg-[#ffb26a] transition"
-                >
-                  Next <FaArrowRight />
-                </button>
-              </div>
-
-              <div className="grid grid-cols-2 gap-4">
-                {awards.map((award, idx) => (
-                  <button
-                    key={award.name}
-                    onClick={() => setCurrentIndex(idx)}
-                    className={`rounded-3xl border px-4 py-3 text-left transition ${
-                      idx === currentIndex
-                        ? 'border-[#ff8c42] bg-[#ff8c42]/10 text-white'
-                        : 'border-white/10 bg-white/5 text-slate-300 hover:border-[#ff8c42]'
-                    }`}
-                  >
-                    <p className="font-semibold">{award.name}</p>
-                    <p className="text-sm text-slate-400">{award.achievement}</p>
-                  </button>
-                ))}
-              </div>
-            </div>
+            <button
+              type="button"
+              onClick={prevAward}
+              className="absolute sm:hidden block left-[-35] top-1/2 z-20 -translate-y-1/2 rounded-full border border-white/10 bg-black/40 p-3 text-white transition hover:bg-black/60"
+            >
+              <FaArrowLeft />
+            </button>
+            <button
+              type="button"
+              onClick={nextAward}
+              className="absolute sm:hidden block right-[-35] z-20 top-1/2 -translate-y-1/2 rounded-full border border-white/10 bg-black/40 p-3 text-white transition hover:bg-black/60"
+            >
+              <FaArrowRight />
+            </button>
           </div>
         </motion.div>
 

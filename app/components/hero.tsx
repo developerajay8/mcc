@@ -9,7 +9,7 @@ export default function Hero() {
       {/* <div className="absolute left-[-120px] top-10 h-72 w-72 rounded-full bg-[#ff8c42]/20 blur-3xl" /> */}
       <div className="absolute right-[-80px] top-32 h-64 w-64 rounded-full bg-[#ffb26a]/10 blur-3xl" />
 
-      <div className="relative mx-auto flex max-w-7xl flex-col gap-12 lg:flex-row lg:items-center rounded-3xl border border-white/10 bg-[#e3c8b6] p-8 shadow-2xl shadow-[#020d20]/40 backdrop-blur-xl">
+      <div className="relative mx-auto flex max-w-7xl flex-col gap-12 lg:flex-row lg:items-center rounded-3xl border border-white/10 bg-[#e3c8b6] sm:p-8 p-4 shadow-2xl shadow-[#020d20]/40 backdrop-blur-xl">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
@@ -51,7 +51,7 @@ export default function Hero() {
           className="relative mx-auto w-full max-w-xl"
         >
           <div className="">
-            <img src="/heroimage.jpg" alt="Commerce coaching success" className="h-[500px] w-full object-cover rounded-[24px]" />
+            <img src="/IMG_1446 (2) (1).png" alt="Commerce coaching success" className="sm:h-[500px] h-[420px] w-full object-cover rounded-[24px]" />
           </div>
         </motion.div>
       </div>

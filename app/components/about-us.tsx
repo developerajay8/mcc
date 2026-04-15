@@ -30,7 +30,7 @@ export default function AboutUs() {
   ];
 
   return (
-    <section id="about" className="relative overflow-hidden bg-[#08162f] py-20 text-white">
+    <section id="about" className="relative overflow-hidden bg-[#08162f] pb-20 text-white">
       <div className="absolute left-0 top-16 h-52 w-52 rounded-full bg-[#ff8c42]/15 blur-3xl" />
       <div className="absolute right-0 top-24 h-64 w-64 rounded-full bg-[#ffb26a]/10 blur-3xl" />
 
@@ -57,13 +57,13 @@ export default function AboutUs() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="relative overflow-hidden rounded-[20px] border border-white/10 bg-[#0f294f]/90 p-10 shadow-2xl shadow-[#020d20]/50"
+            className="relative overflow-hidden rounded-[20px] border border-white/10 bg-[#0f294f]/90 md:p-10 p-4 shadow-2xl shadow-[#020d20]/50"
           >
             <div className="absolute -left-12 top-10 h-28 w-28 rounded-full bg-[#ff8c42]/15 blur-3xl" />
             <div className="absolute right-10 top-6 h-16 w-16 rounded-full bg-[#ffb26a]/20 blur-2xl" />
 
             <div className="relative z-10 space-y-8">
-              <div className="rounded-[12px] border border-white/10 bg-white/5 p-8">
+              <div className="rounded-[12px] border border-white/10 bg-white/5 md:p-8 p-6">
                 <p className="text-sm uppercase tracking-[0.35em] text-[#ffb26a]/80">Our story</p>
                 <h3 className="mt-4 text-3xl font-bold text-white">Trusted commerce coaching</h3>
                 <p className="mt-4 text-slate-300 leading-relaxed">
