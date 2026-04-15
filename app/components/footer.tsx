@@ -25,9 +25,8 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-
-    { icon: FaInstagram, href: '#', label: 'Instagram' }
-    
+    { icon: FaInstagram, href: 'https://www.instagram.com/mccl.asses?igsh=MWMzMjJucXMxYTdpYQ==', label: 'Instagram' },
+    { icon: FaYoutube, href: 'https://youtube.com/@mahendracommerceclasses6861?si=b8F9IuuTA5l8BXk8', label: 'YouTube' }
   ];
 
   return (
@@ -57,6 +56,7 @@ export default function Footer() {
                 <motion.a
                   key={index}
                   href={social.href}
+                target=''
                   whileHover={{ scale: 1.1, y: -2 }}
                   className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-[#ffb26a] transition-all duration-300 hover:bg-[#ff8c42]/20"
                   aria-label={social.label}

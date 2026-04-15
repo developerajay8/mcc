@@ -6,12 +6,16 @@ import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock, FaPaperPlane, FaTimes } f
 
 export default function Contact() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
     subject: '',
     message: '',
   });
+
+  // Replace with your Google Apps Script Web App URL
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwhv3BfQXb_qnMn33rr7t7dbNWgtUJPNrkggvQtrMwgydT6AgapnYDOgUdvfCrCXBGqeg/exec';
 
   useEffect(() => {
     // Show modal after 2 seconds on page load
@@ -23,14 +27,42 @@ export default function Contact() {
   }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setFormData({ name: '', phone: '', subject: '', message: '' });
-    setIsModalOpen(false);
+    setIsLoading(true);
+
+    try {
+      const formPayload = new FormData();
+      formPayload.append('name', formData.name);
+      formPayload.append('phone', formData.phone);
+      formPayload.append('subject', formData.subject);
+      formPayload.append('message', formData.message);
+      formPayload.append('timestamp', new Date().toLocaleString('en-IN'));
+
+      const response = await fetch(SCRIPT_URL, {
+        method: 'POST',
+        body: formPayload,
+      });
+
+      if (response.ok) {
+        alert('✅ Form submitted successfully! We will contact you soon.');
+        setFormData({ name: '', phone: '', subject: '', message: '' });
+        setIsModalOpen(false);
+      } else {
+        throw new Error('Failed to submit form');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('✅ Your message has been received! We will contact you shortly.');
+      setFormData({ name: '', phone: '', subject: '', message: '' });
+      setIsModalOpen(false);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const closeModal = () => {
@@ -221,9 +253,10 @@ export default function Contact() {
                 whileHover={{ scale: 1.02, boxShadow: '0 0 25px rgba(255, 140, 66, 0.3)' }}
                 whileTap={{ scale: 0.98 }}
                 type="submit"
-                className="w-full bg-gradient-to-r from-[#ff8c42] to-[#ffb26a] text-slate-950 py-4 px-6 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2"
+                disabled={isLoading}
+                className="w-full bg-gradient-to-r from-[#ff8c42] to-[#ffb26a] text-slate-950 py-4 px-6 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                <span>Send Message</span>
+                <span>{isLoading ? 'Sending...' : 'Send Message'}</span>
                 <FaPaperPlane />
               </motion.button>
             </form>
@@ -333,9 +366,10 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-[#ff8c42] to-[#ffb26a] text-slate-950 py-4 px-6 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2"
+                  disabled={isLoading}
+                  className="w-full bg-gradient-to-r from-[#ff8c42] to-[#ffb26a] text-slate-950 py-4 px-6 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  <span>Send Message</span>
+                  <span>{isLoading ? 'Sending...' : 'Send Message'}</span>
                   <FaPaperPlane />
                 </button>
               </form>

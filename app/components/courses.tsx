@@ -2,49 +2,58 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaBook, FaClock, FaUsers, FaStar } from 'react-icons/fa';
+import Link from 'next/link';
 
 export default function Courses() {
   const courses = [
     {
-      title: 'CA Foundation Coaching',
-      description: 'Focused classes for CA Foundation with problem-solving drills and full syllabus coverage.',
-      duration: '9 months',
+      title: 'CMA Foundation',
+      description: 'Master Cost and Management Accounting fundamentals with expert guidance and comprehensive study materials.',
+      duration: '6 months',
       students: 320,
       rating: 4.9,
       icon: FaBook,
     },
     {
-      title: 'CMA Foundation Mastery',
-      description: 'Structured coaching for CMA Foundation, including theory, practicals and revision tests.',
+      title: 'CMA Inter',
+      description: 'Advanced CMA Intermediate coaching with focus on costing techniques and financial management strategies.',
+      duration: '7 months',
+      students: 280,
+      rating: 4.8,
+      icon: FaBook,
+    },
+    {
+      title: 'CMA Final',
+      description: 'Professional CMA Final preparation with case studies and strategic cost management expertise.',
       duration: '8 months',
-      students: 260,
-      rating: 4.8,
-      icon: FaBook,
-    },
-    {
-      title: 'CMA Inter Accelerator',
-      description: 'Accelerated training for CMA Intermediate with exam strategy and time management.',
-      duration: '6 months',
-      students: 190,
+      students: 200,
       rating: 4.9,
       icon: FaBook,
     },
     {
-      title: 'XI-XII Commerce Board Success',
-      description: 'Commerce classes for XI-XII with Accounts, Economics, Business Studies and Computer.',
+      title: 'CA Foundation',
+      description: 'Complete CA Foundation coaching covering accounting, business law, economics and quantitative aptitude.',
+      duration: '4.5 months',
+      students: 450,
+      rating: 4.9,
+      icon: FaBook,
+    },
+    {
+      title: 'CA Inter',
+      description: 'Advanced CA Intermediate coaching with audit, taxation and corporate law specialization.',
+      duration: '9 months',
+      students: 380,
+      rating: 4.8,
+      icon: FaBook,
+    },
+    {
+      title: 'CA Final',
+      description: 'Professional CA Final program with advanced accounting, auditing and tax law mastery.',
       duration: '12 months',
-      students: 410,
+      students: 220,
       rating: 4.9,
       icon: FaBook,
     },
-    {
-      title: 'CUET / Commerce Entrance Prep',
-      description: 'High-impact coaching for CUET and university commerce entrance exams.',
-      duration: '5 months',
-      students: 145,
-      rating: 4.8,
-      icon: FaBook,
-    }
   ];
 
   return (
@@ -106,6 +115,7 @@ export default function Courses() {
                     <FaStar className="text-yellow-400" />
                     <span className="text-slate-300 font-semibold">{course.rating}</span>
                   </div>
+                  <Link href={"/contact"}>
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -113,6 +123,7 @@ export default function Courses() {
                   >
                     Enroll Now
                   </motion.button>
+                  </Link>
                 </div>
               </div>
             </motion.div>
@@ -126,6 +137,8 @@ export default function Courses() {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
+                  <Link href={"/courses"}>
+
           <motion.button
             whileHover={{ scale: 1.05, boxShadow: '0 0 20px rgba(255, 140, 66, 0.3)' }}
             whileTap={{ scale: 0.95 }}
@@ -133,6 +146,7 @@ export default function Courses() {
           >
             View All Courses
           </motion.button>
+          </Link>
         </motion.div>
       </div>
     </section>

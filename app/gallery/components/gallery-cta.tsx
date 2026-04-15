@@ -109,15 +109,22 @@ export default function GalleryCTA() {
               Stay updated with the latest photos, videos, and announcements from MCC Classes. Follow our social media channels for daily updates!
             </p>
             <div className="flex justify-center gap-4 flex-wrap">
-              {['Instagram', 'YouTube'].map((social) => (
-                <motion.button
-                  key={social}
-                  whileHover={{ scale: 1.05 }}
-                  className="border-2 border-[#ff8c42] text-[#ffb26a] px-6 py-3 rounded-full font-semibold hover:bg-[#ff8c42]/20 transition"
-                >
-                  {social}
-                </motion.button>
-              ))}
+              <motion.a
+                href="#"
+                whileHover={{ scale: 1.05 }}
+                className="border-2 border-[#ff8c42] text-[#ffb26a] px-6 py-3 rounded-full font-semibold hover:bg-[#ff8c42]/20 transition"
+              >
+                Instagram
+              </motion.a>
+              <motion.a
+                href="https://youtube.com/@mahendracommerceclasses6861?si=b8F9IuuTA5l8BXk8"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                className="border-2 border-[#ff8c42] text-[#ffb26a] px-6 py-3 rounded-full font-semibold hover:bg-[#ff8c42]/20 transition"
+              >
+                YouTube
+              </motion.a>
             </div>
           </div>
         </motion.div>

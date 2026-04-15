@@ -5,6 +5,7 @@ import Results from "./components/results";
 import WhyChooseUs from "./components/why-choose-us";
 import AboutUs from "./components/about-us";
 import Faculty from "./components/faculty";
+import Team from "./components/team";
 import Testimonials from "./components/testimonials";
 import Gallery from "./components/gallery";
 import Contact from "./components/contact";
@@ -20,6 +21,7 @@ export default function Home() {
     <FinalCTA/>
     <AboutUs/>
     <Faculty/>
+    <Team/>
     <Testimonials/>
     <Gallery/>
     <Contact/>

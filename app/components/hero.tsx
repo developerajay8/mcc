@@ -18,12 +18,12 @@ export default function Hero() {
         >
           <p className="text-sm uppercase tracking-[0.35em] text-[black]">Mahendra Commerce Classes</p>
           <h1 className="text-3xl font-bold text-[#06102d] sm:text-5xl pt-6">
-            Build your CA, CMA & Commerce future with confidence
+            11th se lekar CA & CMA tak – Success ka Complete Roadmap
           </h1>
 
           <div className="mt-6 max-w-xl space-y-4 text-base text-[#443f45] sm:text-lg">
-            <p>Expert coaching in CA Foundation, CMA Foundation, XI-XII Commerce and CUET Commerce.</p>
-            <p>Trusted by 5,000+ students for top board results and professional exam success.</p>
+            <p>Expert coaching in CA, CMA , XI-XII Commerce </p>
+            <p>Trusted by 1000+ students for top board results and professional exam success.</p>
             <p>Small batches, personal mentorship, and result-driven study plans.</p>
           </div>
 
@@ -51,7 +51,7 @@ export default function Hero() {
           className="relative mx-auto w-full max-w-xl"
         >
           <div className="">
-            <img src="/IMG_1446 (2) (1).png" alt="Commerce coaching success" className="sm:h-[500px] h-[420px] w-full object-cover rounded-[24px]" />
+            <img src="/image.png" alt="Commerce coaching success" className="sm:h-[400px] h-[420px] w-full object-cover rounded-[24px]" />
           </div>
         </motion.div>
       </div>

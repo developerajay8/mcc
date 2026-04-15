@@ -6,37 +6,36 @@ import { FaArrowLeft, FaArrowRight, FaAward, FaEnvelope } from 'react-icons/fa';
 export default function Faculty() {
   const awards = [
     {
-      name: 'Rahul Singh',
-      achievement: '1st Rank - CA Foundation',
-      award: 'Gold Scholar Award',
-      details: 'Top marks in Accounts and Business Law with 82% overall score.',
-      image: '/s.png',
-      year: '2024',
+      image: '/1.png',
     },
-    {
-      name: 'Priya Sharma',
-      achievement: '2nd Rank - CMA Foundation',
-      award: 'Commerce Excellence Medal',
-      details: 'Outstanding performance in Cost & Management Accounting and Taxation.',
-      image: '/s.png',
-      year: '2024',
+     {
+      image: '/2.png',
     },
-    {
-      name: 'Ankit Bhardwaj',
-      achievement: 'Top Performer - CUET Commerce',
-      award: 'Ranker Achievement Trophy',
-      details: 'Secured a top percentile score with focused exam strategy and revision.',
-      image: '/s.png',
-      year: '2024',
+     {
+      image: '/3.png',
     },
-    {
-      name: 'Keshav Khuntata',
-      achievement: 'Top Ranker - XI Commerce',
-      award: 'Board Merit Award',
-      details: 'Exceptional board results in Accounts, Economics and Business Studies.',
-      image: '/s.png',
-      year: '2024',
+     {
+      image: '/4.png',
     },
+     {
+      image: '/5.png',
+    },
+     {
+      image: '/6.png',
+    },
+     {
+      image: '/7.png',
+    },
+     {
+      image: '/8.png',
+    },
+     {
+      image: '/9.png',
+    },
+     {
+      image: '/10.png',
+    }
+    
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -95,7 +94,6 @@ export default function Faculty() {
             <motion.img
               key={currentIndex}
               src={awards[currentIndex].image}
-              alt={awards[currentIndex].name}
               className="sm:h-[500px] h-[450px] w-full rounded-[28px] object-cover"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -103,12 +101,7 @@ export default function Faculty() {
             />
             
 
-            <div className="sm:block hidden absolute bottom-6 left-6 right-6 rounded-[28px] bg-slate-950/85 p-6 text-white shadow-2xl shadow-slate-950/40 backdrop-blur-md">
-              <p className="text-xs uppercase tracking-[0.35em] text-[#ffb26a]/80">Award Winner</p>
-              <h3 className="mt-3 text-2xl font-semibold">{awards[currentIndex].name}</h3>
-              <p className="mt-2 text-sm text-slate-300">{awards[currentIndex].achievement}</p>
-              <p className="mt-3 text-sm text-slate-300">{awards[currentIndex].details}</p>
-            </div>
+           
 
             <button
               type="button"
