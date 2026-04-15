@@ -6,13 +6,13 @@ import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 export default function Team() {
   const teachers = [
     {
-      name: 'Rahul Singh',
-      experience: '5+ years in CA coaching',
+      name: 'N.K Sharma',
+      experience: '6+ years ',
       image: '/nk.png',
     },
     {
-      name: 'Priya Sharma',
-      experience: '7+ years in CMA training',
+      name: 'Keshav khuteta',
+      experience: '3+ years ',
       image: '/keshove.png',
     },
     
