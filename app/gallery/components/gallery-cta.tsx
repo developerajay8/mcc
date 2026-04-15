@@ -110,7 +110,8 @@ export default function GalleryCTA() {
             </p>
             <div className="flex justify-center gap-4 flex-wrap">
               <motion.a
-                href="#"
+                href="https://www.instagram.com/mccl.asses?igsh=MWMzMjJucXMxYTdpYQ=="
+                target="_blank"
                 whileHover={{ scale: 1.05 }}
                 className="border-2 border-[#ff8c42] text-[#ffb26a] px-6 py-3 rounded-full font-semibold hover:bg-[#ff8c42]/20 transition"
               >
